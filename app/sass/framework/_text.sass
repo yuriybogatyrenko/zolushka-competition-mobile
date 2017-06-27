@@ -1,0 +1,65 @@
+.fw-clearfix
+  &::after
+    display: block
+    content: ''
+    clear: both
+
+@each $value in left, right
+  .fw-text-uppercase
+    float: $value
+
+  .fw-text-uppercase\@xs
+    @media screen and (min-width: $extraSmall)
+      float: $value
+
+  .fw-text-uppercase\@s
+    @media screen and (min-width: $small)
+      float: $value
+
+  .fw-text-uppercase\@m
+    @media screen and (min-width: $medium)
+      float: $value
+
+  .fw-text-uppercase\@l
+    @media screen and (min-width: $large)
+      float: $value
+
+@each $value in uppercase, lowercase, capitalize, underline
+  .fw-text-uppercase
+    text-transform: $value
+
+  .fw-text-uppercase\@xs
+    @media screen and (min-width: $extraSmall)
+      text-transform: $value
+
+  .fw-text-uppercase\@s
+    @media screen and (min-width: $small)
+      text-transform: $value
+
+  .fw-text-uppercase\@m
+    @media screen and (min-width: $medium)
+      text-transform: $value
+
+  .fw-text-uppercase\@l
+    @media screen and (min-width: $large)
+      text-transform: $value
+
+@each $value in center, left, right
+  .fw-text-#{$value}
+    text-align: $value
+
+  .fw-text-#{$value}\@xs
+    @media screen and (min-width: $extraSmall)
+      text-align: $value
+
+  .fw-text-#{$value}\@s
+    @media screen and (min-width: $small)
+      text-align: $value
+
+  .fw-text-#{$value}\@m
+    @media screen and (min-width: $medium)
+      text-align: $value
+
+  .fw-text-#{$value}\@l
+    @media screen and (min-width: $large)
+      text-align: $value

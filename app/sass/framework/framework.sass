@@ -1,0 +1,85 @@
+@import "functions"
+@import "viewports"
+@import "backgrounds-and-colors"
+@import "width"
+@import "height"
+@import "grid"
+@import "margins-and-paddings"
+@import "flex"
+@import "fonts"
+@import "border"
+@import "visibilities"
+@import "text"
+
+.fw-inline-block
+  display: inline-block
+
+.fw-inline-block\@xs
+  @media screen and (min-width: $extraSmall)
+   display: inline-block
+
+.fw-inline-block\@s
+  @media screen and (min-width: $small)
+   display: inline-block
+
+.fw-inline-block\@m
+  @media screen and (min-width: $medium)
+   display: inline-block
+
+.fw-inline-block\@l
+  @media screen and (min-width: $large)
+   display: inline-block
+
+.fw-block
+  display: block
+
+.fw-block\@xs
+  @media screen and (min-width: $extraSmall)
+    display: block
+
+.fw-block\@s
+  @media screen and (min-width: $small)
+    display: block
+
+.fw-block\@m
+  @media screen and (min-width: $medium)
+    display: block
+
+.fw-block\@l
+  @media screen and (min-width: $large)
+    display: block
+
+.fw-inline
+  display: inline
+
+.fw-inline\@xs
+  @media screen and (min-width: $extraSmall)
+    display: inline
+
+.fw-inline\@s
+  @media screen and (min-width: $small)
+    display: inline
+
+.fw-inline\@m
+  @media screen and (min-width: $medium)
+    display: inline
+
+.fw-inline\@l
+  @media screen and (min-width: $large)
+    display: inline
+
+@each $value in 100
+  .fw-box-proportional-#{$value}
+    position: relative
+
+    &::after
+      display: block
+      content: ''
+      padding-top: unquote("#{$value}%")
+
+    > *
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
