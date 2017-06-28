@@ -1,0 +1,24 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'components/main-first-screen.twig' %}
+
+    <div class="registered fw-pt-20 fw-pb-20">
+        <div class="container">
+            <div class="block-title fw-mb-10 text-blue fw-text-uppercase fw-text-center fw-font-futura-demic fw-fz-22">
+                Уже зарегистрировано <br> 45984 участницы
+            </div>
+            <div class="fw-fz-15 fw-text-center">
+                Прием заявок на участие ведется <br>
+                до 21 июня 2017 года
+            </div>
+        </div>
+    </div>
+
+    {% include 'components/girls-grid-princess.twig' %}
+
+    {% include 'components/denim-plate.twig' %}
+{% endblock %}

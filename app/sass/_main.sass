@@ -2,6 +2,7 @@ html, body
   margin: 0
   //height: 100%
   font-family: Helvetica, sans-serif, arial
+  line-height: normal
 
 .app-wrapper
   min-width: 320px
@@ -42,3 +43,26 @@ html, body
     top: 0
     right: 0
     width: 40px
+
+.girl-box__avatar
+  border-radius: 12px
+
+.girls-grid
+  position: relative
+  height: 200px
+  overflow: hidden
+
+.girls-grid__container
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  flex-wrap: nowrap
+
+  .girl-box
+    width: 130px
+
+  & > .fw-grid
+    flex-wrap: nowrap
+
+  & > .princess-box
+    width: 150px

@@ -681,6 +681,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
+.fw-grid-12 {
+  margin-left: -12px;
+  margin-bottom: -12px;
+}
+.fw-grid-12 > * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 0) {
+  .fw-grid-12\@xs {
+    margin-left: -12px;
+    margin-bottom: -12px;
+  }
+  .fw-grid-12\@xs > * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-grid-12\@s {
+    margin-left: -12px;
+    margin-bottom: -12px;
+  }
+  .fw-grid-12\@s > * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-grid-12\@m {
+    margin-left: -12px;
+    margin-bottom: -12px;
+  }
+  .fw-grid-12\@m > * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-grid-12\@l {
+    margin-left: -12px;
+    margin-bottom: -12px;
+  }
+  .fw-grid-12\@l > * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 12px;
+    margin-bottom: 12px;
+  }
+}
+
 .fw-grid-15 {
   margin-left: -15px;
   margin-bottom: -15px;
@@ -4877,6 +4940,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
+.fw-fz-13 {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 0) {
+  .fw-fz-13\@xs {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .fw-fz-13\@s {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fw-fz-13\@m {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .fw-fz-13\@l {
+    font-size: 13px;
+  }
+}
+
 .fw-fz-14 {
   font-size: 14px;
 }
@@ -5469,7 +5560,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 .icon-18-age {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../images/icons-se919539699.png');
+  background-image: url('../images/icons-sddeb1623fa.png');
   background-position: 0 0;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -5480,8 +5571,8 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-18-age {
-    background-image: url('../images/icons-2x-seb8fbedfe2.png');
-    background-size: 40px auto;
+    background-image: url('../images/icons-2x-s727d089825.png');
+    background-size: 128px auto;
     background-position: 0 0;
     height: 40px;
     width: 40px;
@@ -5491,7 +5582,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 .icon-enter {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../images/icons-se919539699.png');
+  background-image: url('../images/icons-sddeb1623fa.png');
   background-position: 0 -65px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -5502,8 +5593,8 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-enter {
-    background-image: url('../images/icons-2x-seb8fbedfe2.png');
-    background-size: 40px auto;
+    background-image: url('../images/icons-2x-s727d089825.png');
+    background-size: 128px auto;
     background-position: 0 -60px;
     height: 20px;
     width: 23px;
@@ -5513,7 +5604,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 .icon-closed-eye {
   display: inline-block;
   vertical-align: middle;
-  background-image: url('../images/icons-se919539699.png');
+  background-image: url('../images/icons-sddeb1623fa.png');
   background-position: 0 -45px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -5524,11 +5615,33 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-closed-eye {
-    background-image: url('../images/icons-2x-seb8fbedfe2.png');
-    background-size: 40px auto;
+    background-image: url('../images/icons-2x-s727d089825.png');
+    background-size: 128px auto;
     background-position: 0 -43px;
     height: 15px;
     width: 22px;
+  }
+}
+
+.icon-princess-question {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('../images/icons-sddeb1623fa.png');
+  background-position: 0 -90px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 93px;
+  width: 128px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .icon-princess-question {
+    background-image: url('../images/icons-2x-s727d089825.png');
+    background-size: 128px auto;
+    background-position: 0 -83px;
+    height: 93px;
+    width: 128px;
   }
 }
 
@@ -5580,6 +5693,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
 html, body {
   margin: 0;
   font-family: Helvetica, sans-serif, arial;
+  line-height: normal;
 }
 
 .app-wrapper {
@@ -5640,6 +5754,35 @@ html, body {
   top: 0;
   right: 0;
   width: 40px;
+}
+
+.girl-box__avatar {
+  border-radius: 12px;
+}
+
+.girls-grid {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.girls-grid__container {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.girls-grid__container .girl-box {
+  width: 130px;
+}
+.girls-grid__container > .fw-grid {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.girls-grid__container > .princess-box {
+  width: 150px;
 }
 
 .popup-wrapper {
