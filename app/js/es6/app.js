@@ -4,7 +4,7 @@ class YOURAPPNAME {
         this.doc = doc;
         this.window = window;
         this.html = this.doc.querySelector('html');
-        this.body= this.doc.body;
+        this.body = this.doc.body;
         this.location = location;
         this.hash = location.hash;
         this.Object = Object;
@@ -17,7 +17,7 @@ class YOURAPPNAME {
     appLoad(type, callback) {
         const _self = this;
 
-        switch(type) {
+        switch (type) {
             case 'loading':
                 if (_self.doc.readyState === 'loading') callback();
 
@@ -29,7 +29,7 @@ class YOURAPPNAME {
 
                 break;
             case 'full':
-                _self.window.onload = function(e) {
+                _self.window.onload = function (e) {
                     callback(e);
                 };
 
@@ -124,13 +124,19 @@ class YOURAPPNAME {
         try {
             if (notevil) {
                 return JSON.parse(str
-                    .replace(/([\$\w]+)\s*:/g, function(_, $1){return '"'+$1+'":';})
-                    .replace(/'([^']+)'/g, function(_, $1){return '"'+$1+'"';})
+                    .replace(/([\$\w]+)\s*:/g, function (_, $1) {
+                        return '"' + $1 + '":';
+                    })
+                    .replace(/'([^']+)'/g, function (_, $1) {
+                        return '"' + $1 + '"';
+                    })
                 );
             } else {
                 return (new Function("", "const json = " + str + "; return JSON.parse(JSON.stringify(json));"))();
             }
-        } catch(e) { return false; }
+        } catch (e) {
+            return false;
+        }
     };
 
     options(string) {
@@ -139,7 +145,7 @@ class YOURAPPNAME {
         if (typeof string !== 'string') return string;
 
         if (string.indexOf(':') !== -1 && string.trim().substr(-1) !== '}') {
-            string = '{'+string+'}';
+            string = '{' + string + '}';
         }
 
         const start = (string ? string.indexOf("{") : -1);
@@ -148,11 +154,26 @@ class YOURAPPNAME {
         if (start !== -1) {
             try {
                 options = _self.str2json(string.substr(start));
-            } catch (e) {}
+            } catch (e) {
+            }
         }
 
         return options;
     };
+
+    formPasswordSwitch() {
+        $('.js-password-detector').on('click', function (e) {
+            const $this = $(this);
+            const $input = $this.siblings('input');
+
+            if ($input.attr('type') === 'password')
+                $input.attr('type', 'text');
+            else
+                $input.attr('type', 'password');
+
+            console.log('hi');
+        });
+    }
 
     popups(options) {
         const _self = this;
@@ -243,7 +264,7 @@ class YOURAPPNAME {
     };
 }
 
-(function() {
+(function () {
 
     const app = new YOURAPPNAME(document);
 
@@ -261,9 +282,8 @@ class YOURAPPNAME {
     });
 
     app.appLoad('full', function (e) {
-        console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
-        // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
-        // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+        app.popups();
+        app.formPasswordSwitch();
     });
 
 })();

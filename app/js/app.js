@@ -172,6 +172,18 @@ var YOURAPPNAME = function () {
             return options;
         }
     }, {
+        key: 'formPasswordSwitch',
+        value: function formPasswordSwitch() {
+            $('.js-password-detector').on('click', function (e) {
+                var $this = $(this);
+                var $input = $this.siblings('input');
+
+                if ($input.attr('type') === 'password') $input.attr('type', 'text');else $input.attr('type', 'password');
+
+                console.log('hi');
+            });
+        }
+    }, {
         key: 'popups',
         value: function popups(options) {
             var _self = this;
@@ -282,8 +294,7 @@ var YOURAPPNAME = function () {
     });
 
     app.appLoad('full', function (e) {
-        console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
-        // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
-        // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+        app.popups();
+        app.formPasswordSwitch();
     });
 })();

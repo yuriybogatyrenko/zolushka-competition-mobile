@@ -1,6 +1,47 @@
-.fri
+[class*="icon-"]
 	display: inline-block
 	vertical-align: middle
 
-.fri-qube-logo
-	+sprite(qube-logo)
+@each $value in 18-age, enter, closed-eye
+	.icon-#{$value}
+		display: inline-block
+		vertical-align: middle
+		+sprite(icon-#{$value})
+
+.icon-arrow-down
+	border-right: 2px solid #fff
+	border-bottom: 2px solid #fff
+	width: 8px
+	height: 8px
+	transform: rotate(45deg)
+	margin-top: -4px
+
+.icon-arrow-right
+	border-right: 3px solid #b9c9cd
+	border-bottom: 3px solid #b9c9cd
+	width: 9px
+	height: 9px
+	transform: rotate(-45deg)
+	margin-top: -4px
+
+.icon-cross
+	width: 16px
+	height: 16px
+	position: relative
+	transform: rotate(45deg)
+	cursor: pointer
+
+	&:after, &:before
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 2px
+		height: 100%
+		transform: translate(-50%, -50%)
+		background-color: #9b9b9b
+		content: ''
+
+	&:after
+		width: 100%
+		height: 2px
