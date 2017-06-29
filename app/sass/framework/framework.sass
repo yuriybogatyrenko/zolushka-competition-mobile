@@ -16,60 +16,13 @@
 
 .fw-inline-block
   display: inline-block
-
-.fw-inline-block\@xs
-  @media screen and (min-width: $extraSmall)
-    display: inline-block
-
-.fw-inline-block\@s
-  @media screen and (min-width: $small)
-    display: inline-block
-
-.fw-inline-block\@m
-  @media screen and (min-width: $medium)
-    display: inline-block
-
-.fw-inline-block\@l
-  @media screen and (min-width: $large)
-    display: inline-block
+  vertical-align: middle
 
 .fw-block
   display: block
 
-.fw-block\@xs
-  @media screen and (min-width: $extraSmall)
-    display: block
-
-.fw-block\@s
-  @media screen and (min-width: $small)
-    display: block
-
-.fw-block\@m
-  @media screen and (min-width: $medium)
-    display: block
-
-.fw-block\@l
-  @media screen and (min-width: $large)
-    display: block
-
 .fw-inline
   display: inline
-
-.fw-inline\@xs
-  @media screen and (min-width: $extraSmall)
-    display: inline
-
-.fw-inline\@s
-  @media screen and (min-width: $small)
-    display: inline
-
-.fw-inline\@m
-  @media screen and (min-width: $medium)
-    display: inline
-
-.fw-inline\@l
-  @media screen and (min-width: $large)
-    display: inline
 
 @each $value in 100
   .fw-box-proportional-#{$value}
@@ -92,17 +45,47 @@
   text-decoration: inherit
 
 .button
-  display: inline-block
   font-family: FuturaDemiC, arial, sans-serif
   text-decoration: none
-  line-height: 40px
+  line-height: 1.1
   font-size: 19px
-  padding: 0 40px
+  padding: 10px 40px
   border: none
+  text-align: center
+  display: inline-flex
+  align-items: center
+  justify-content: center
+
+.button-pink-empty
+  box-shadow: 0 0 0 1px $colorPink inset
+  background-color: transparent
+  font-size: 16px
+  font-family: Helvetica, sans-serif
+  color: $colorPink
+  text-decoration: none
 
 .button-pink
   background: #f90369
   color: #fff
+  
+.button-yellow
+  background-color: #ffd758
+  color: $colorBlack
+
+.button-blue
+  background-color: $colorLightBlue
+  color: $colorBlack
+
+.button-grey
+  background-color: rgba(255, 255, 255, 0.4)
+  color: #f90369
+  font-family: Helvetica, sans-serif
+  font-size: 15px
+  height: 44px
+
+.button-dark-blue
+  color: #fff
+  background-color: #24dff1
 
 .button-round
   border-radius: 50px
@@ -110,16 +93,34 @@
 .button-square
   border-radius: 5px
 
-input[type="text"], input[type="password"], input[type="number"], input[type="email"]
-  border-radius: 3px
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea
+  border-radius: 5px
   background-color: #ffffff
-  box-shadow: inset 1px 1px 0 0 #bad5d5
+  //box-shadow: inset 1px 1px 0 0 #bad5d5
   border: solid 1px #b9d4d4
+  padding: 0 15px
   height: 40px
   display: block
   width: 100%
-  font-size: 16px
+  font-size: 15px
   color: #000
+  transition: all 0.3s ease
+
+  &:focus
+    border-color: $colorPink
+    outline: none
+
+textarea
+  height: 60px
+  padding-top: 10px
+  padding-bottom: 10px
+  resize: none
 
 .fw-link-pink
   color: #f90369
+
+.fw-lh-1-54
+  line-height: 1.54
+
+.fw-lh-1-33
+  line-height: 1.33

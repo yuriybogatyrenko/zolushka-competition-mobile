@@ -1,0 +1,97 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="home-about fw-bg-color-light-grey">
+        <div class="home-about__image">
+            <img src="images/home-about-image.jpg" class="fw-width-1-1" alt="">
+        </div>
+        <div class="fw-pt-20 fw-pb-20">
+            <div class="container">
+                <div class="block-title fw-fz-22 fw-text-uppercase fw-font-futura-demic fw-mb-15">Правила конкурса</div>
+                <div class="fw-mb-20">
+                    <ul class="numered-list fw-fz-13 fw-lh-1-54">
+                        <li class="numered-list__item fw-mb-15">
+                            Скачай и установи приложение от спонсора конкурса — сервиса <a href="#"
+                                                                                           class="reset-link fw-link-pink">Denim</a>
+                        </li>
+                        <li class="numered-list__item fw-mb-15">
+                            Пройди регистрацию в приложении, указав реальную информацию
+                            о себе — эти данные будут использованы в твоей анкете на сайте конкурса.
+                        </li>
+                        <li class="numered-list__item">
+                            Получи уникальный код участницы конкурса и введи его в поле ниже:
+                        </li>
+                    </ul>
+                </div>
+                <form action="#" class="fw-mb-15">
+                    <div class="form-line fw-mb-10">
+                        <input type="text" class="fw-text-center" placeholder="Введи уникальный код участницы">
+                    </div>
+                    <div class="form-line">
+                        <button class="button button-pink button-square fw-width-1-1">Продолжить</button>
+                    </div>
+                </form>
+                <div class="fw-font-futura-demic fw-fz-16 fw-mb-10">
+                    Не знаешь, где найти код участницы? Смотри шаг №1!
+                </div>
+                <div class="fw-lh-1-54 fw-fz-13">
+                    После ввода кода участницы тебе останется только загрузить фото и ответить на несколько вопросов о
+                    себе,
+                    после чего ты сразу же получишь шанс выиграть путевку на двоих в незабываемое романтическое
+                    путешествие
+                    и другие призы!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq fw-bg-color-white fw-pt-20">
+        <div class="container">
+            <div class="block-title fw-fz-22 fw-font-futura-demic fw-mb-20 fw-text-uppercase">Ответы на часто
+                задаваемые вопросы
+            </div>
+
+            <div class="faq__list fw-lh-1-54 fw-fz-13">
+                <div class="faq__item">
+                    <div class="faq__title fw-font-futura-demic fw-fz-16 fw-mb-5">Я хочу победить. Что нужно сделать?
+                    </div>
+                    <div class="faq__content">
+                        <p>Для начала скачай и установи приложение от спонсора конкурса – сервиса Denim. Затем пройди
+                            регистрацию, указав реальную информацию о себе, отправь свои фото в бикинии через форму и
+                            следи за ходом конкурса в своем профиле на сайте.</p>
+                        <p>Увеличь свои шансы на успех – подписывайся на Denim в одной из социальных сетей и делись с
+                            друзьями информацией о конкурсе. </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__title fw-font-futura-demic fw-fz-16 fw-mb-5">Как будет проходить голосование?</div>
+                    <div class="faq__content">
+                        <p>Пользователи сервиса Denim, имеющие премиум-аккаунт, оценивают девушек на специальной
+                            странице конкурса в соответствии со специальным алгоритмом обработки фото.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__title fw-font-futura-demic fw-fz-16 fw-mb-5">Я хочу победить. Что нужно сделать?
+                    </div>
+                    <div class="faq__content">
+                        <p>DENIM от сервиса «Золушка Project» — это уже зарекомендовавший себя дейтинг для по-настоящему
+                            красивых девушек, ищущих успешных мужчин, которые хотят тратить деньги на достойные
+                            подарки.</p>
+                        <p>Знакомства без обязательств для красивых девушек и успешных мужчин стали максимально
+                            быстрыми и удобными благодаря строгой модерации женщин, а также так называемой «клубной»
+                            системе для представителей сильного пола – доступ для мужчин к сервису платный.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+
+    {% include 'components/denim-plate.twig' %}
+{% endblock %}

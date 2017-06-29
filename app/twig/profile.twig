@@ -1,0 +1,86 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="profile-page fw-bg-color-light-grey fw-pb-30">
+        <div class="container">
+            <a href="#" class="girls-page__rating-plate reset-link fw-mb-15 fw-ml-inverse-15 fw-mr-inverse-15 fw-flex fw-flex-space-between fw-flex-middle">
+                <div>
+                    <i class="icon-rating-list fw-mr-5"></i>
+                    <span class="fw-inline-block fw-fz-14">Все участницы</span>
+                </div>
+            </a>
+            <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-mb-10">Волкова ирина, 23 года</div>
+            <div class="fw-mb-15">
+                г.Нижний Новгород
+            </div>
+            <div class="profile-content fw-border-radius-10 fw-bg-color-white">
+                <div class="profile-avatar fw-fz-0">
+                    <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                </div>
+                <div class="profile-details fw-pl-15 fw-pr-15 fw-pb-15 fw-pt-15 fw-lh-1-33">
+                    <div class="fw-flex fw-flex-middle fw-mb-20">
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-battles fw-mr-5"></i>
+                            <span>2342</span>
+                        </div>
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-likes fw-mr-5"></i>
+                            <span>11</span>
+                        </div>
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-rating-list fw-mr-5"></i>
+                            <span>234</span>
+                        </div>
+                    </div>
+                    <div class="fw-font-bold">
+                        Как увеличить шансы на победу
+                    </div>
+                    <div class="fw-mb-15">
+                        Подпишись на канал конкурса на <a href="#" class="reset-link fw-link-pink">YouTube</a>
+                    </div>
+                    <div class="fw-mb-10">
+                        <div class="fw-mb-10">Подпишись на Denim в социальных сетях <br>
+                            +10 мест в рейтинге:
+                        </div>
+                        <div class="fw-grid fw-grid-15">
+                            <div>
+                                <i class="icon-social-small-tw"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-vk"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-fb"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-insta"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fw-mb-20">
+                        Сделай репост любой из записей <br>
+                        +15 мест в рейтинге <a href="#" class="reset-link fw-link-pink">Выбрать запись</a>
+                    </div>
+                    <div class="fw-mb-20">
+                        Поделись с друзьями новостью об участии в конкурсе
+                        +20 мест в рейтиге
+                    </div>
+                    <div>
+                        <a href="#" class="button button-square button-pink-empty fw-width-1-1">
+                            <i class="icon-external-link fw-mr-5"></i>
+                            <span class="fw-inline-block">Поделиться</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    {% include 'layouts/footer.twig' %}
+{% endblock %}

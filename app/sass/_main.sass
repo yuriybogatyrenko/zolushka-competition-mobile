@@ -3,6 +3,7 @@ html, body
   //height: 100%
   font-family: Helvetica, sans-serif, arial
   line-height: normal
+  font-size: 15px
 
 .app-wrapper
   min-width: 320px
@@ -24,11 +25,17 @@ html, body
 
 .header
   padding: 12px 0
+  background-color: #443a91
+  color: #fff
+  
+  &--transparent
+    background-color: transparent
 
 .denim-plate
   height: 50px
   display: flex
   align-items: center
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1)
 
 .form-line--has-icon
   position: relative
@@ -40,7 +47,7 @@ html, body
     align-items: center
     justify-content: center
     flex-direction: column
-    top: 0
+    bottom: 0
     right: 0
     width: 40px
 
@@ -51,6 +58,11 @@ html, body
   position: relative
   height: 200px
   overflow: hidden
+  padding-top: 15px
+
+  &--small
+    height: 80px
+    padding-top: 0
 
 .girls-grid__container
   position: absolute
@@ -61,8 +73,134 @@ html, body
   .girl-box
     width: 130px
 
+    &--small
+      width: 90px
+      font-size: 0
+
   & > .fw-grid
     flex-wrap: nowrap
 
-  & > .princess-box
-    width: 150px
+.princess-box
+  width: 150px
+  height: 200px
+  background: url(../images/princess-box-bg.png) no-repeat center center / cover
+  position: relative
+  margin-top: -15px
+
+  [class*="icon-"]
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+
+
+.first-screen__title
+  position: relative
+  display: inline
+  .icon-18-age
+    position: absolute
+    top: -20px
+    right: 50%
+    margin-right: -120px
+
+.prises__item-image
+  width: 150px
+  display: inline-block
+
+  img
+    border-radius: 100%
+    
+.prises
+  background: url("../images/prises-bg.jpg") center center
+
+.how-works
+  background-color: $colorLightBlue
+
+.how-works__image
+  width: 250px
+  display: inline-block
+  
+.rating
+  background-color: #f4f6f9
+
+.rating__table
+  td
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    padding: 12px 5px
+
+.rating__image, .rating__number
+  width: 1px
+
+.social__header
+  display: flex
+  align-items: center
+  padding: 0 15px
+  height: 50px
+  color: #fff
+
+  &--insta
+    background-color: $colorBlack
+    
+  &--vk
+    background-color: #5b7aa8
+    
+  &--fb
+    background-color: #3b579d
+    
+.girls-page
+  background-color: #e7edef
+
+.girls-page__rating-plate
+  border-bottom: 1px solid rgba(#000, 0.1)
+  padding: 12px 15px
+
+.numered-list
+  counter-reset: list
+
+.numered-list__item
+  padding-left: 45px
+  position: relative
+  counter-increment: list
+
+  &:after
+    display: block
+    content: counter(list)
+    position: absolute
+    left: 0
+    top: 0
+    width: 32px
+    height: 32px
+    font-size: 24px
+    color: #f90369
+    font-family: FuturaDemiC, sans-serif
+    text-align: center
+    line-height: 32px
+    border-radius: 100%
+    background-color: #fff
+
+.faq__list
+  counter-reset: list
+
+.faq__item
+  counter-increment: list
+
+  &:not(:last-child)
+    margin-bottom: 15px
+
+.faq__title
+  &:before
+    content: counter(list)'. '
+    display: inline
+    font-family: FuturaDemiC, sans-serif
+
+.faq__content
+  p:not(:last-child)
+    margin-bottom: 10px
+
+.photo-upload-area
+  border: solid 1px rgba(0, 0, 0, 0.15)
+  border-radius: 5px
+
+.empty-upload-area
+  height: 68px

@@ -1,6 +1,6 @@
 @import "../colors"
 
-@each $value in white_#{$colorWhite}, black_#{$colorBlack}, grey_#{$colorGrey} // class-name-of-color_#{$colorVariable}
+@each $value in white_#{$colorWhite}, black_#{$colorBlack}, grey_#{$colorGrey}, blue_#{$colorBlue}, light-grey_#{$colorLightGrey} // class-name-of-color_#{$colorVariable}
   $values: str_split($value, '_')
   $color: nth($values, 2)
   $colorName: nth($values, 1)

@@ -1,0 +1,49 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="girls-page fw-pt-20 fw-pb-20">
+        <div class="container">
+            <div class="block-title fw-mb-5 fw-text-uppercase fw-text-center fw-font-futura-demic fw-fz-22">
+                Участницы
+            </div>
+            <div class="fw-font-futura-demic fw-fz-19 fw-mb-10 fw-text-center">
+                Голосование начнется 26 июня
+            </div>
+            <div class="fw-mb-15 fw-text-center">
+                <i class="icon-location"></i>
+                <span class="fw-inline-block fw-link-pink">Все города</span>
+            </div>
+            <div class="fw-mb-10">
+                <div class="fw-grid fw-grid-10">
+                    {% for i in 1..8 %}
+                        <div class="fw-width-1-2">
+                            <div class="girl-box fw-width-1-1 fw-border-radius-10 fw-bg-color-white">
+                                <div class="girl-box__image fw-fz-0">
+                                    <img alt="" src="http://placehold.it/140x140" class="fw-width-1-1 girl-box__avatar">
+                                </div>
+                                <div class="girl-box__content fw-pt-5 fw-pb-5 fw-pl-10 fw-pr-10">
+                                    <div class="fw-fz-13 fw-font-bold">Аня, 23, Москва</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <a href="#" class="button button-square button-grey fw-width-1-1">Смотреть еще</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="fw-pt-15">
+            {% include 'components/i-want.twig' %}
+        </div>
+    </div>
+    {% include 'layouts/footer.twig' %}
+{% endblock %}

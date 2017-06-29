@@ -1,0 +1,171 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="girls-page fw-pt-20 fw-pb-20">
+        <div class="container">
+            <form action="#">
+                <div class="fw-font-futura-demic fw-fz-19 fw-mb-30 fw-text-center">
+                    Поздравляем - до завершения регистрации в конкурсе остался всего 1 шаг!
+                </div>
+                <div class="block-title fw-mb-15 fw-text-uppercase fw-font-futura-demic fw-fz-22">
+                    Проверь свои данные:
+                </div>
+                <div class="fw-mb-30">
+                    <div class="form-line fw-mb-10">
+                        <div class="field-caption fw-fz-13 fw-mb-5">
+                            Имя
+                        </div>
+                        <div class="form-line--has-icon">
+                            <input type="text" id="form-name" placeholder="Имя">
+                            <label for="form-name" class="input--icon">
+                                <i class="icon-pencil"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line fw-mb-10">
+                        <div class="field-caption fw-fz-13 fw-mb-5">
+                            Город
+                        </div>
+                        <div class="form-line--has-icon">
+                            <input type="text" id="form-name" placeholder="Город">
+                            <label for="form-name" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line fw-mb-10">
+                        <div class="field-caption fw-fz-13 fw-mb-5">
+                            Возраст
+                        </div>
+                        <div class="form-line--has-icon">
+                            <input type="text" id="form-name" placeholder="Возраст">
+                            <label for="form-name" class="input--icon">
+                                <i class="icon-pencil"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <div class="field-caption fw-fz-13 fw-mb-5">
+                            E-mail
+                        </div>
+                        <div class="form-line--has-icon">
+                            <input type="text" id="form-name" placeholder="E-mail">
+                            <label for="form-name" class="input--icon">
+                                <i class="icon-pencil"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-photo fw-mb-30">
+                    <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-mb-10">Загрузить фото
+                    </div>
+
+                    <div class="fw-lh-1-54 fw-fz-13 fw-mb-15">
+                        Добавь одну или несколько твоих самых эффектных снимков в бикини, предварительно ознакомившись с
+                        <a href="#" class="reset-link fw-link-pink js-open-popup"
+                           data-popup-target="photo-recomendations">рекомендациями</a> по размещению фото
+                    </div>
+                    <div class="photo-upload-area fw-bg-color-white fw-mb-10">
+                        <label class="empty-upload-area fw-flex fw-flex-middle fw-flex-center">
+                            <i class="icon-camera fw-mr-10"></i>
+                            <span class="fw-inline-block fw-font-futura-demic fw-fz-15 fw-link-pink">Добавить</span>
+                            <input type="file" class="fw-hidden">
+                        </label>
+                        <div class="filled-upload-area">
+
+                        </div>
+                    </div>
+                    <div class="fw-color-grey fw-fz-13">
+                        Можно добавлять не более 15 штук
+                    </div>
+                </div>
+                <div>
+                    <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-mb-20">Ответь на вопросы
+                        блиц-опроса
+                    </div>
+
+                    <div class="form-line fw-mb-20">
+                        <div class="field-caption fw-fz-13 fw-mb-5 fw-lh-1-54">
+                            Что ты больше всего в себе любишь?
+                        </div>
+                        <div class="form-line--has-icon">
+                            <textarea id="textarea-1"></textarea>
+                            <label for="textarea-1" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-line fw-mb-20">
+                        <div class="field-caption fw-fz-13 fw-mb-5 fw-lh-1-54">
+                            Какая часть тела у тебя самая красивая?
+                        </div>
+                        <div class="form-line--has-icon">
+                            <textarea id="textarea-2"></textarea>
+                            <label for="textarea-2" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-line fw-mb-20">
+                        <div class="field-caption fw-fz-13 fw-mb-5 fw-lh-1-54">
+                            Какие у тебя таланты помимо эффектной внешности?
+                        </div>
+                        <div class="form-line--has-icon">
+                            <textarea id="textarea-3"></textarea>
+                            <label for="textarea-3" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-line fw-mb-20">
+                        <div class="field-caption fw-fz-13 fw-mb-5 fw-lh-1-54">
+                            Какие ошибки чаще всего совершают мужчины, пытаясь познакомиться с тобой?
+                        </div>
+                        <div class="form-line--has-icon">
+                            <textarea id="textarea-4"></textarea>
+                            <label for="textarea-4" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-line fw-mb-20">
+                        <div class="field-caption fw-fz-13 fw-mb-5 fw-lh-1-54">
+                            Самый приятный комплимент, который тебе когда-либо делал мужчина?
+                        </div>
+                        <div class="form-line--has-icon">
+                            <textarea id="textarea-5"></textarea>
+                            <label for="textarea-5" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-line fw-mb-20">
+                        <div class="field-caption fw-fz-13 fw-mb-5 fw-lh-1-54">
+                            Какого бы мужчину ты хотела найти?
+                        </div>
+                        <div class="form-line--has-icon">
+                            <textarea id="textarea-6"></textarea>
+                            <label for="textarea-6" class="input--icon">
+                                <i class="icon-input-check"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <button class="button button-square button-pink fw-width-1-1">Готово</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% include 'layouts/footer.twig' %}
+{% endblock %}

@@ -8,7 +8,7 @@
 .fw-grid-bottom
   align-items: center
 
-@each $value in 0, 12, 15, 20
+@each $value in 0, 1, 10, 12, 15, 20
   .fw-grid-#{$value}
     margin-left: -#{$value}px
     margin-bottom: -#{$value}px
@@ -16,44 +16,4 @@
     & > *
       box-sizing: border-box
       padding-left: #{$value}px
-      margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@s
-    @media screen and (min-width: $small)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@m
-    @media screen and (min-width: $medium)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
-
-  .fw-grid-#{$value}\@l
-    @media screen and (min-width: $large)
-      margin-left: -#{$value}px
-      margin-bottom: -#{$value}px
-
-      & > *
-        box-sizing: border-box
-        padding-left: #{$value}px
-        margin-bottom: #{$value}px
+      padding-bottom: #{$value}px
