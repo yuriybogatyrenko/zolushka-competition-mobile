@@ -1,0 +1,46 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="girls-page fw-pt-20 fw-pb-20">
+        <div class="container">
+            <div class="block-title fw-mb-5 fw-text-uppercase fw-text-center fw-font-futura-demic fw-fz-22">
+                Текущий рейтинг участниц
+            </div>
+            <div class="fw-font-futura-demic fw-fz-19 fw-mb-10 fw-text-center">
+                Голосование начнется 26 июня
+            </div>
+            <div class="fw-mb-15 fw-text-center">
+                <i class="icon-location"></i>
+                <span class="fw-inline-block fw-link-pink">Все города</span>
+                
+            </div>
+            <a href="#" class="girls-page__rating-plate reset-link fw-mb-15 fw-bg-color-white fw-ml-inverse-15 fw-mr-inverse-15 fw-flex fw-flex-space-between fw-flex-middle">
+                <div>
+                    <i class="icon-rating-grid fw-mr-5"></i>
+                    <span class="fw-inline-block fw-fz-14">Все участницы</span>
+                </div>
+                <div>
+                    <i class="icon-arrow-right icon-arrow-right--pink icon-arrow-right--light"></i>
+                </div>
+            </a>
+            <div class="fw-mb-10">
+                {% include 'components/rating-table.twig' %}
+            </div>
+            <div>
+                <a href="#" class="button button-square button-grey fw-width-1-1">Смотреть еще</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="fw-pt-15">
+            {% include 'components/i-want.twig' %}
+        </div>
+    </div>
+    {% include 'layouts/footer.twig' %}
+{% endblock %}

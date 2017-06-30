@@ -1,9 +1,10 @@
 <div class="popup-wrapper js-popup" data-popup="login">
-    <div class="popup">
+    <div class="popup login-popup">
         <div class="js-close-popup close-popup">
             <i class="icon-cross"></i>
         </div>
-        <div class="popup-title fw-mb-20 fw-text-center fw-text-uppercase fw-font-futura-demic fw-fz-22">Авторизация</div>
+        <div class="popup-title fw-mb-20 fw-text-center fw-text-uppercase fw-font-futura-demic fw-fz-22">Авторизация
+        </div>
         <form action="#">
             <div class="form-line fw-mb-20">
                 <input type="text" placeholder="Эл.почта" class="fw-text-center">
@@ -24,3 +25,158 @@
         </form>
     </div>
 </div>
+
+<div class="popup-wrapper subscription-popup js-popup" data-popup="subscription">
+    <div class="popup ">
+        <div class="js-close-popup close-popup close-popup--black">
+            <i class="icon-cross"></i>
+        </div>
+        <div class="subscription-popup-carousel owl-carousel" data-margin="10" data-auto-width>
+            {% for i in 1..10 %}
+                <div class="fw-width-250 fw-bg-color-white fw-pt-10 fw-pl-10 fw-pr-10 fw-pb-10">
+                    <div class="fw-mb-10 fw-font-futura-demic fw-fz-16 fw-lh-1">Сложно ли найти любовника современной
+                        девушке?
+                    </div>
+                    <div class="fw-mb-10">
+                        <img alt="" src="http://placehold.it/230x130" class="fw-width-1-1"/>
+                    </div>
+                    <div class="fw-mb-10 fw-lh-1-54 fw-fz-12">
+                        Гармонизация личной жизни, потребность в острых ощущениях или в качественном сексе – а какую
+                        цель
+                        преследуете вы, желая найти любовника в Москве или другом городе.
+                    </div>
+                    <div>
+                        <div class="fw-mb-5 fw-font-futura-demic fw-fz-16">
+                            Поделитесь этим в своей ленте
+                        </div>
+                        <div class="fw-grid fw-grid-5">
+                            <div>
+                                <i class="icon-social-small-tw"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-vk"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-fb"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-insta"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper subscription-popup share-with-friends js-popup" data-popup="share-with-friends">
+    <div class="popup">
+        <div class="js-close-popup close-popup close-popup--black">
+            <i class="icon-cross"></i>
+        </div>
+        <div class="fw-width-250 fw-bg-color-white fw-pt-10 fw-pl-10 fw-pr-10 fw-pb-10 fw-ml-auto fw-mr-auto">
+            <div class="fw-mb-10 fw-font-futura-demic fw-fz-16 fw-lh-1">Сложно ли найти любовника современной девушке?
+            </div>
+            <div class="fw-mb-10">
+                <img alt="" src="http://placehold.it/230x130" class="fw-width-1-1"/>
+            </div>
+            <div class="fw-mb-10 fw-lh-1-54 fw-fz-12">
+                Гармонизация личной жизни, потребность в острых ощущениях или в качественном сексе – а какую
+                цель
+                преследуете вы, желая найти любовника в Москве или другом городе.
+            </div>
+            <div>
+                <div class="fw-mb-5 fw-font-futura-demic fw-fz-16">
+                    Поделитесь этим в своей ленте
+                </div>
+                <div class="fw-grid fw-grid-5">
+                    <div>
+                        <i class="icon-social-small-tw"></i>
+                    </div>
+                    <div>
+                        <i class="icon-social-small-vk"></i>
+                    </div>
+                    <div>
+                        <i class="icon-social-small-fb"></i>
+                    </div>
+                    <div>
+                        <i class="icon-social-small-insta"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-wrapper js-popup" data-popup="photo-recommendations">
+    <div class="popup fw-pl-15 fw-pr-15 fw-pt-15 fw-pb-15 fw-bg-color-white">
+        <div class="js-close-popup close-popup">
+            <i class="icon-cross"></i>
+        </div>
+        <div class="photo-recommendations__content fw-mb-15">
+            <div class="fw-font-futura-demic fw-fz-19 fw-lh-1 fw-mb-20">Рекомендации по размешению фото</div>
+            <div class="photo-recommendations__carousel owl-carousel fw-mb-20" data-auto-width data-margin="10">
+                <div class="photo-recommendations__example fw-width-100 photo-recommendations__example--green fw-border-radius-5">
+                    <div class="fw-fz-0"><img alt="" src="http://placehold.it/100x100"
+                                              class="fw-width-1-1 fw-border-radius-5"/></div>
+                    <div class="fw-font-medium fw-text-center fw-pl-5 fw-pr-5 fw-pt-5 fw-pb-5 fw-lh-1-33 fw-fz-13 fw-color-white">
+                        Хорошо
+                    </div>
+                </div>
+                {% for i in 1..10 %}
+                    <div class="photo-recommendations__example fw-width-100 photo-recommendations__example--red fw-border-radius-5">
+                        <div class="fw-fz-0"><img alt="" src="http://placehold.it/100x100"
+                                                  class="fw-width-1-1 fw-border-radius-5"/></div>
+                        <div class="fw-font-medium fw-text-center fw-pl-5 fw-pr-5 fw-pt-5 fw-pb-5 fw-lh-1-33 fw-fz-13 fw-color-white">
+                            Плохо
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="questionnaire__list fw-lh-1-54 fw-fz-12">
+                <div class="questionnaire__item">
+                    <div class="questionnaire__title fw-font-futura-demic fw-fz-16 fw-mb-5">Фото в бикини</div>
+                    <div class="questionnaire__content">
+                        «Золушка в бикини» – это конкурс бикини, следовательно, речь идет о фотографиях в купальниках, а
+                        не в платьях и шубах. Покажите себя – свое лицо, сексуальное тело. Фото при этом подойдут любые,
+                        заказывать специально профессиональную фотосъемку по этому поводу вовсе не нужно. Покажи себя –
+                        свое лицо, сексуальное тело.
+                    </div>
+                </div>
+                <div class="questionnaire__item">
+                    <div class="questionnaire__title fw-font-futura-demic fw-fz-16 fw-mb-5">Нейтральный фон</div>
+                    <div class="questionnaire__content">
+                        Любой замысловатый фон с множеством предметов только отвлекает внимание от главного – тебя.
+                        Поэтому постарайся представить ту фотографию, где ничто бы не мешало любоваться твоим плоским
+                        животиком, осиной талией и эффектными бедрами.
+                    </div>
+                </div>
+                <div class="questionnaire__item">
+                    <div class="questionnaire__title fw-font-futura-demic fw-fz-16 fw-mb-5">Меньше искусства</div>
+                    <div class="questionnaire__content">
+                        Конкурс бикини предполагает фотографии из повседневной жизни, с отдыха, а не с обложек модных
+                        журналов. Именно поэтому не старайся застыть в необычной позе, удивить всех томным взглядом,
+                        сняться с медведем в обнимку и т.д
+                    </div>
+                </div>
+                <div class="questionnaire__item">
+                    <div class="questionnaire__title fw-font-futura-demic fw-fz-16 fw-mb-5">Минимум ретуши</div>
+                    <div class="questionnaire__content">
+                        Оценивают фотографии участниц опытные состоятельные мужчины, которые умеют различать
+                        естественные снимки от десятки раз обработанных в фоторедакторах. Поэтому плюсом к твоему снимку
+                        будет его натуральность.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup__bottom-button js-close-popup fw-ml-inverse-15 fw-mr-inverse-15">
+            <div class="fw-pb-10 fw-pt-10 fw-pl-15 fw-pr-15 fw-mb-inverse-15 fw-link-pink fw-fz-19 fw-font-futura-demic fw-text-center">
+                Понятно
+            </div>
+        </div>
+    </div>
+</div>
+

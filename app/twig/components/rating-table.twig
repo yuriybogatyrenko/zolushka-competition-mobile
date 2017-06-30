@@ -1,0 +1,24 @@
+<table class="rating__table fw-fz-13 fw-width-1-1 fw-mb-20">
+    {% for i in 1..5 %}
+        <tr>
+            <td class="rating__number">
+                {{ i }}
+            </td>
+            <td class="rating__image">
+                <img alt="" class="fw-border-radius-percent-50" src="http://placehold.it/32x32"/>
+            </td>
+            <td class="rating__info">
+                <p class="fw-font-futura-demic fw-fz-14">Наталья 22</p>
+                <p class="fw-fz-12">Москва</p>
+            </td>
+            <td class="rating__battles">
+                <i class="icon-battles"></i>
+                <span class="fw-inline-block">3033</span>
+            </td>
+            <td class="rating__likes">
+                <i class="icon-likes"></i>
+                <span class="fw-inline-block fw-font-bold">25</span>
+            </td>
+        </tr>
+    {% endfor %}
+</table>

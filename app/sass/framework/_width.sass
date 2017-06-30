@@ -9,57 +9,9 @@
   .fw-width-#{$widthName}
     width: unquote("#{$width}%")
 
-  .fw-width-#{$widthName}\@xs
-    @media screen and (min-width: $extraSmall)
-      width: unquote("#{$width}%")
-
-  .fw-width-#{$widthName}\@s
-    @media screen and (min-width: $small)
-      width: unquote("#{$width}%")
-
-  .fw-width-#{$widthName}\@m
-    @media screen and (min-width: $medium)
-      width: unquote("#{$width}%")
-
-  .fw-width-#{$widthName}\@l
-    @media screen and (min-width: $large)
-      width: unquote("#{$width}%")
-
-@each $value in 20
+@each $value in 90, 100, 250
   .fw-width-#{$value}
     width: #{$value}px
 
-  .fw-width-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      width: #{$value}px
-
-  .fw-width-#{$value}\@s
-    @media screen and (min-width: $small)
-      width: #{$value}px
-
-  .fw-width-#{$value}\@m
-    @media screen and (min-width: $medium)
-      width: #{$value}px
-
-  .fw-width-#{$value}\@l
-    @media screen and (min-width: $large)
-      width: #{$value}px
-
   .fw-max-width-#{$value}
     max-width: #{$value}px
-
-  .fw-max-width-#{$value}\@xs
-    @media screen and (min-width: $extraSmall)
-      max-width: #{$value}px
-
-  .fw-max-width-#{$value}\@s
-    @media screen and (min-width: $small)
-      max-width: #{$value}px
-
-  .fw-max-width-#{$value}\@m
-    @media screen and (min-width: $medium)
-      max-width: #{$value}px
-
-  .fw-max-width-#{$value}\@l
-    @media screen and (min-width: $large)
-      max-width: #{$value}px

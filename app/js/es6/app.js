@@ -170,8 +170,6 @@ class YOURAPPNAME {
                 $input.attr('type', 'text');
             else
                 $input.attr('type', 'password');
-
-            console.log('hi');
         });
     }
 
@@ -262,6 +260,38 @@ class YOURAPPNAME {
 
         return plugin;
     };
+
+    questionnaire(selector) {
+        let $selector = $(selector),
+            $button = $selector.find('[data-questionnaire-show]'),
+            $container = $selector.find('[data-questionnaire-height]');
+
+        $button.on('click', function (e) {
+            e.preventDefault();
+            let height = $container.outerHeight();
+            $selector.css({height: height}).addClass('visible-active');
+            setTimeout(function () {
+                $selector.css({height: 'auto'});
+            }, 300)
+        })
+    }
+
+    carousels(selector) {
+        const $carousels = $(selector);
+
+        $carousels.each(function () {
+            let $this = $(this);
+            let Vthis = this;
+
+            $this.owlCarousel({
+                autoWidth: Vthis.hasAttribute('data-auto-width'),
+                nav: false,
+                dots: false,
+                margin: Vthis.hasAttribute('data-margin') ? parseInt(Vthis.getAttribute('data-margin')) : 0,
+                loop: Vthis.hasAttribute('data-loop')
+            })
+        });
+    }
 }
 
 (function () {
@@ -284,6 +314,8 @@ class YOURAPPNAME {
     app.appLoad('full', function (e) {
         app.popups();
         app.formPasswordSwitch();
+        app.questionnaire('[data-questionnaire]');
+        app.carousels('.owl-carousel');
     });
 
 })();

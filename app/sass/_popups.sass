@@ -10,6 +10,8 @@
   opacity: 0
   visibility: hidden
   transition: all 0.3s ease
+  z-index: 1000
+  overflow: auto
 
   &.opened
     visibility: visible
@@ -22,14 +24,44 @@
   transition: all 0.3s ease
   transform: scale(0.7)
   margin: auto
-  background-color: #fff
   width: 100%
   flex-direction: column
   border-radius: 10px
-  padding: 30px
   position: relative
+
+  &.login-popup
+    padding: 30px
+    background-color: #fff
+
+.subscription-popup
+  padding-right: 0
+  padding-left: 10px
+  padding-top: 40px
+
+  &.share-with-friends
+    padding-right: 15px
+    padding-left: 15px
+
+  .popup
+    background-color: transparent
+    padding: 0
+    margin-left: 0
+    margin-right: 0
 
 .close-popup
   position: absolute
   top: 10px
   right: 10px
+
+  &.close-popup--black
+    width: 32px
+    height: 32px
+    background-color: #000
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    top: -40px
+
+.popup__bottom-button
+  border-top: 1px solid rgba(#000, 0.1)

@@ -179,8 +179,6 @@ var YOURAPPNAME = function () {
                 var $input = $this.siblings('input');
 
                 if ($input.attr('type') === 'password') $input.attr('type', 'text');else $input.attr('type', 'password');
-
-                console.log('hi');
             });
         }
     }, {
@@ -271,6 +269,40 @@ var YOURAPPNAME = function () {
 
             return plugin;
         }
+    }, {
+        key: 'questionnaire',
+        value: function questionnaire(selector) {
+            var $selector = $(selector),
+                $button = $selector.find('[data-questionnaire-show]'),
+                $container = $selector.find('[data-questionnaire-height]');
+
+            $button.on('click', function (e) {
+                e.preventDefault();
+                var height = $container.outerHeight();
+                $selector.css({ height: height }).addClass('visible-active');
+                setTimeout(function () {
+                    $selector.css({ height: 'auto' });
+                }, 300);
+            });
+        }
+    }, {
+        key: 'carousels',
+        value: function carousels(selector) {
+            var $carousels = $(selector);
+
+            $carousels.each(function () {
+                var $this = $(this);
+                var Vthis = this;
+
+                $this.owlCarousel({
+                    autoWidth: Vthis.hasAttribute('data-auto-width'),
+                    nav: false,
+                    dots: false,
+                    margin: Vthis.hasAttribute('data-margin') ? parseInt(Vthis.getAttribute('data-margin')) : 0,
+                    loop: Vthis.hasAttribute('data-loop')
+                });
+            });
+        }
     }]);
 
     return YOURAPPNAME;
@@ -296,5 +328,7 @@ var YOURAPPNAME = function () {
     app.appLoad('full', function (e) {
         app.popups();
         app.formPasswordSwitch();
+        app.questionnaire('[data-questionnaire]');
+        app.carousels('.owl-carousel');
     });
 })();
