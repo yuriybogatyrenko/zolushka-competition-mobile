@@ -293,6 +293,14 @@ class YOURAPPNAME {
         });
     }
 
+    fullScreen(selector) {
+        $(selector).css({height: $(window).outerHeight()-50});
+
+        /*$(window).resize(() => {
+            $(selector).css({height: $(window).outerHeight()-50});
+        });*/
+    }
+
     photosUpload() {
         const $imageDropBox = $('#image-drop-box');
 
@@ -425,6 +433,7 @@ class YOURAPPNAME {
         app.questionnaire('[data-questionnaire]');
         app.carousels('.owl-carousel');
         app.photosUpload();
+        app.fullScreen('.main-first-screen');
     });
 
 })();
