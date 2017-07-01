@@ -5966,6 +5966,14 @@ html, body {
   font-size: 15px;
 }
 
+html.popup-opened {
+  overflow: hidden;
+}
+html.popup-opened body {
+  overflow: hidden;
+  height: 100%;
+}
+
 .app-wrapper {
   min-width: 320px;
 }
@@ -6278,6 +6286,16 @@ html, body {
 .uploaded-image-box {
   position: relative;
   font-size: 0;
+  width: 100%;
+}
+.uploaded-image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .uploaded-image-delete {
@@ -6308,6 +6326,23 @@ html, body {
   height: 60%;
 }
 
+.photo-upload-area .empty-upload-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.photo-upload-area .filled-upload-area {
+  display: none;
+}
+.photo-upload-area.image-drop-box-has-file .filled-upload-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.photo-upload-area.image-drop-box-has-file .empty-upload-area {
+  display: none;
+}
+
 .popup-wrapper {
   position: fixed;
   top: 0;
@@ -6319,6 +6354,8 @@ html, body {
   display: flex;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.55);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease;

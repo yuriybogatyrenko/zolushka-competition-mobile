@@ -5,6 +5,15 @@ html, body
   line-height: normal
   font-size: 15px
 
+html
+  &.popup-opened
+    overflow: hidden
+    //height: 100%
+
+    body
+      overflow: hidden
+      height: 100%
+
 .app-wrapper
   min-width: 320px
 
@@ -258,6 +267,15 @@ html, body
 .uploaded-image-box
   position: relative
   font-size: 0
+  width: 100%
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .uploaded-image-delete
   position: absolute
@@ -283,3 +301,17 @@ html, body
   &:after
     width: 2px
     height: 60%
+
+.photo-upload-area
+  .empty-upload-area
+    display: flex
+
+  .filled-upload-area
+    display: none
+
+  &.image-drop-box-has-file
+    .filled-upload-area
+      display: flex
+
+    .empty-upload-area
+      display: none

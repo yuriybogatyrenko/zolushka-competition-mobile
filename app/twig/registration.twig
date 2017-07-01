@@ -70,41 +70,30 @@
                         <a href="#" class="reset-link fw-link-pink js-open-popup"
                            data-popup-target="photo-recommendations">рекомендациями</a> по размещению фото
                     </div>
-                    <div class="photo-upload-area fw-mb-10">
+                    <div class="photo-upload-area fw-mb-10" id="image-drop-box">
                         <label class="empty-upload-area fw-bg-color-white fw-flex fw-flex-middle fw-flex-center">
                             <i class="icon-camera fw-mr-10"></i>
                             <span class="fw-inline-block fw-font-futura-demic fw-fz-15 fw-link-pink">Добавить</span>
-                            <input type="file" class="fw-hidden">
+                            <input type="file" id="image-drop-box__files" multiple class="fw-hidden">
                         </label>
-                        <div class="filled-upload-area fw-grid-10 fw-grid">
+                        <div class="filled-upload-area fw-grid-10 fw-grid" id="image-drop-box__preview">
                             <div class="fw-width-1-3">
-                                <div class="upload-photo-box photo-input-box fw-box-proportional-100 fw-bg-color-white fw-border-radius-5 fw-flex-center fw-text-center fw-flex-middle fw-flex fw-flex-column">
+                                <label for="image-drop-box__files" class="upload-photo-box photo-input-box fw-box-proportional-100 fw-bg-color-white fw-border-radius-5 fw-flex-center fw-text-center fw-flex-middle fw-flex fw-flex-column">
                                     <div class="fw-flex fw-flex-column fw-text-center fw-flex-center fw-flex-middle">
                                         <i class="icon-camera fw-mb-10"></i>
                                         <div class="fw-font-futura-demic fw-link-pink">
                                             Добавить
                                         </div>
                                     </div>
-                                </div>
+                                </label>
                             </div>
-                            <div class="fw-width-1-3">
+                            {#<div class="fw-width-1-3">
                                 <div class="uploaded-image-box upload-photo-box">
-                                    <img alt="" src="http://placehold.it/90x90" class="fw-border-radius-5 fw-width-1-1"/>
+                                    <img alt="" src="http://placehold.it/90x90"
+                                         class="fw-border-radius-5 fw-width-1-1"/>
                                     <i class="uploaded-image-delete"></i>
                                 </div>
-                            </div>
-                            <div class="fw-width-1-3">
-                                <div class="uploaded-image-box upload-photo-box">
-                                    <img alt="" src="http://placehold.it/90x90" class="fw-border-radius-5 fw-width-1-1"/>
-                                    <i class="uploaded-image-delete"></i>
-                                </div>
-                            </div>
-                            <div class="fw-width-1-3">
-                                <div class="uploaded-image-box upload-photo-box">
-                                    <img alt="" src="http://placehold.it/90x90" class="fw-border-radius-5 fw-width-1-1"/>
-                                    <i class="uploaded-image-delete"></i>
-                                </div>
-                            </div>
+                            </div>#}
                         </div>
                     </div>
                     <div class="fw-color-grey fw-fz-13">

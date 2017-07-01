@@ -292,6 +292,114 @@ class YOURAPPNAME {
             })
         });
     }
+
+    photosUpload() {
+        const $imageDropBox = $('#image-drop-box');
+
+        if ($imageDropBox.length) {
+            const imageList = [];
+            const imageFilesList = [];
+            const imageDropBoxLoadingClass = 'image-drop-box-loading';
+            const imageDropBoxHasFilesClass = 'image-drop-box-has-file';
+
+            const input = this.doc.getElementById('image-drop-box__files');
+
+            const showPreloader = () => {
+                $imageDropBox.addClass(imageDropBoxLoadingClass);
+            };
+
+            const hidePreloader = () => {
+                setTimeout(function () {
+                    $imageDropBox.removeClass(imageDropBoxLoadingClass);
+                }, 300);
+            };
+
+            const checkImageDropBox = () => {
+                (imageList.length) ? $imageDropBox.addClass(imageDropBoxHasFilesClass) : $imageDropBox.removeClass(imageDropBoxHasFilesClass);
+            };
+
+            const renderTemplate = (src, index) => {
+                return `<div class="fw-width-1-3 preview__item">
+                                <div class="uploaded-image-box upload-photo-box fw-box-proportional-100">
+                                    <img alt="" src="${src}"
+                                         class="fw-border-radius-5 fw-width-1-1"/>
+                                    <a href="#${index}" class="preview__remove"><i class="uploaded-image-delete"></i></a>
+                                </div>
+                            </div>`;
+                /*return '<div class="fw-width-1-6 preview__item">' +
+                    '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' +
+                    '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' +
+                    '<a href="#' + index + '" class="fw-absolute fw-absolute-top-right fw-mt-inverse-10 fw-mr-inverse-10 preview__remove"><i class="icon icon-trash"></i></a>' +
+                    '</div></div></div>';*/
+            };
+
+            const renderFiles = () => {
+                const $imagePreviewBox = $('#image-drop-box__preview');
+                let templates = [];
+
+                if (imageList.length) {
+                    for (let i = 0; i < imageList.length; i++) {
+                        const imageListSrc = imageList[i];
+
+                        templates.push(renderTemplate(imageListSrc, i));
+
+                        $imagePreviewBox.children('.preview__item').remove();
+                        $imagePreviewBox.append(templates.join(''));
+                    }
+                }
+            };
+
+            $(this.doc).on('click', '.preview__remove', function (e) {
+                e.preventDefault();
+                showPreloader();
+
+                const $removeImage = $(this);
+                const index = parseInt($removeImage.attr('href').replace('#', ''));
+
+                if (index > 0) {
+                    imageList.splice(index, 1);
+                    imageFilesList.splice(index, 1);
+                } else {
+                    imageList.shift();
+                    imageFilesList.shift();
+                }
+                checkImageDropBox();
+                setTimeout(function () {
+                    renderFiles();
+                    hidePreloader();
+                    $removeImage.closest('.preview__item').remove();
+                }, 300);
+            });
+
+            input.addEventListener('change', function () {
+                const currentFiles = this.files;
+                const currentFilesLength = currentFiles.length;
+
+                if (currentFilesLength) {
+                    showPreloader();
+
+                    for (let i = 0; i < currentFilesLength; i++) {
+                        const reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            imageList.push(e.target.result);
+                            imageFilesList.push(currentFilesLength[i]);
+                            checkImageDropBox();
+
+                            if (i === currentFilesLength - 1) {
+                                setTimeout(function () {
+                                    renderFiles();
+                                    hidePreloader();
+                                }, 300);
+                            }
+                        };
+
+                        reader.readAsDataURL(currentFiles[i]);
+                    }
+                }
+            });
+        }
+    };
 }
 
 (function () {
@@ -316,6 +424,7 @@ class YOURAPPNAME {
         app.formPasswordSwitch();
         app.questionnaire('[data-questionnaire]');
         app.carousels('.owl-carousel');
+        app.photosUpload();
     });
 
 })();
