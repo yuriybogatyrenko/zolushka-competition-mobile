@@ -425,7 +425,7 @@ class YOURAPPNAME {
 
                 setTimeout(function () {
                     $voteItem.removeClass('animate-flip transition');
-                }, 650);
+                }, 1050);
             }, 500);
         });
     }
