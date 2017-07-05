@@ -246,8 +246,18 @@ html
 .vote-page
   background: linear-gradient(to bottom, #443a91, #302772)
 
+.vote-plate
+  perspective: 500px
+
 .vote-item
   position: relative
+  transform-style: preserve-3d
+
+  &.transition
+    transition: all 0.6s ease
+
+  &.animate-flip
+    transform: rotateX(360deg)
 
 .vote-item__caption
   position: absolute
@@ -260,6 +270,30 @@ html
   position: absolute
   top: -10px
   right: -10px
+  height: 48px
+  width: 48px
+  justify-content: center
+  align-items: center
+  display: flex
+
+  & > *
+    margin: auto
+    display: none
+
+    &:first-child
+      display: block
+
+  &.active
+    & > *
+      display: none
+      &:last-child
+        display: block
+
+  &-pink
+    background-color: $colorPink
+
+  &-green
+    background-color: #35D2AC
 
 .photo-recommendations__example--green
   background-color: #12d579
@@ -322,3 +356,8 @@ html
 .animated-preloader
   position: relative
   height: 50px
+
+.girls-carousel
+  .owl-stage-outer
+    margin-left: -15px
+    padding-left: 15px

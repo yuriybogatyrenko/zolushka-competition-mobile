@@ -419,6 +419,28 @@ var YOURAPPNAME = function () {
                 });
             }
         }
+    }, {
+        key: 'voteTrigger',
+        value: function voteTrigger() {
+            var $voteItem = $('.vote-item');
+            $('.js-vote-trigger').on('click', function () {
+                var $this = $(this);
+
+                $this.addClass('active');
+
+                $voteItem.addClass('transition');
+
+                setTimeout(function (e) {
+                    $this.removeClass('active');
+
+                    $voteItem.addClass('animate-flip');
+
+                    setTimeout(function () {
+                        $voteItem.removeClass('animate-flip transition');
+                    }, 650);
+                }, 500);
+            });
+        }
     }]);
 
     return YOURAPPNAME;
@@ -448,5 +470,6 @@ var YOURAPPNAME = function () {
         app.carousels('.owl-carousel');
         app.photosUpload();
         app.fullScreen('.main-first-screen');
+        app.voteTrigger();
     });
 })();

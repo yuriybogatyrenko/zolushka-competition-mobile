@@ -408,6 +408,27 @@ class YOURAPPNAME {
             });
         }
     };
+
+    voteTrigger() {
+        const $voteItem = $('.vote-item');
+        $('.js-vote-trigger').on('click', function () {
+            const $this = $(this);
+
+            $this.addClass('active');
+
+            $voteItem.addClass('transition');
+
+            setTimeout(function (e) {
+                $this.removeClass('active');
+
+                $voteItem.addClass('animate-flip');
+
+                setTimeout(function () {
+                    $voteItem.removeClass('animate-flip transition');
+                }, 650);
+            }, 500);
+        });
+    }
 }
 
 (function () {
@@ -434,6 +455,7 @@ class YOURAPPNAME {
         app.carousels('.owl-carousel');
         app.photosUpload();
         app.fullScreen('.main-first-screen');
+        app.voteTrigger();
     });
 
 })();
