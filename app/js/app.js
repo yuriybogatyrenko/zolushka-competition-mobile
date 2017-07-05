@@ -422,22 +422,30 @@ var YOURAPPNAME = function () {
     }, {
         key: 'voteTrigger',
         value: function voteTrigger() {
-            var $voteItem = $('.vote-item');
+            var $voteItems = $('.vote-item');
             $('.js-vote-trigger').on('click', function () {
                 var $this = $(this);
 
                 $this.addClass('active');
 
-                $voteItem.addClass('transition');
+                $voteItems.addClass('transition');
 
                 setTimeout(function (e) {
                     $this.removeClass('active');
+                    var $timeout = 0;
+                    $voteItems.each(function () {
+                        var $voteItem = $(this);
+                        setTimeout(function () {
 
-                    $voteItem.addClass('animate-flip');
+                            $voteItem.addClass('animate-flip');
 
-                    setTimeout(function () {
-                        $voteItem.removeClass('animate-flip transition');
-                    }, 1050);
+                            setTimeout(function () {
+                                $voteItem.removeClass('animate-flip transition');
+                            }, 1050);
+                        }, $timeout);
+                        $timeout += 300;
+                        console.log($timeout);
+                    });
                 }, 500);
             });
         }

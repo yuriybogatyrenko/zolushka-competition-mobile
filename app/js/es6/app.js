@@ -410,22 +410,31 @@ class YOURAPPNAME {
     };
 
     voteTrigger() {
-        const $voteItem = $('.vote-item');
+        const $voteItems = $('.vote-item');
         $('.js-vote-trigger').on('click', function () {
             const $this = $(this);
 
             $this.addClass('active');
 
-            $voteItem.addClass('transition');
+            $voteItems.addClass('transition');
 
             setTimeout(function (e) {
                 $this.removeClass('active');
+                let $timeout = 0;
+                $voteItems.each(function () {
+                    const $voteItem = $(this);
+                    setTimeout(function () {
 
-                $voteItem.addClass('animate-flip');
+                        $voteItem.addClass('animate-flip');
 
-                setTimeout(function () {
-                    $voteItem.removeClass('animate-flip transition');
-                }, 1050);
+                        setTimeout(function () {
+                            $voteItem.removeClass('animate-flip transition');
+                        }, 1050);
+                    }, $timeout);
+                    $timeout += 300;
+                    console.log($timeout);
+                })
+
             }, 500);
         });
     }
