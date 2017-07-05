@@ -1,0 +1,32 @@
+<div class="more-girls fw-pt-15">
+    <div class="container">
+        <div class="more-girls__container fw-mb-10">
+            <div class="block-title fw-fz-30 fw-font-futura-demic fw-mb-15 fw-lh-1">Ещё участницы в твоем вкусе
+            </div>
+            <div class="fw-grid fw-grid-10">
+                {% for i in 1..4 %}
+                    <div class="fw-width-1-2">
+                        <div class="girl-box fw-width-1-1 fw-border-radius-10 fw-bg-color-very-light-grey">
+                            <div class="girl-box__image fw-fz-0">
+                                <img alt="" src="http://placehold.it/140x140" class="fw-width-1-1 girl-box__avatar">
+                            </div>
+                            <div class="girl-box__content fw-pt-10 fw-pb-10 fw-pl-10 fw-pr-10">
+                                <div class="fw-fz-13 fw-font-bold">Аня, 23, Москва</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a href="#"
+           class="girls-page__rating-plate reset-link fw-mb-15 fw-ml-inverse-15 fw-mr-inverse-15 fw-flex fw-flex-space-between fw-flex-middle">
+            <div>
+                <span class="fw-inline-block fw-fz-14">Больше участниц</span>
+            </div>
+            <div>
+                <i class="icon-arrow-right--pink icon-arrow-right icon-arrow-right--light"></i>
+            </div>
+        </a>
+    </div>
+</div>

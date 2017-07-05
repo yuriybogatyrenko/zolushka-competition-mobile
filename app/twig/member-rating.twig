@@ -15,9 +15,9 @@
                     <span class="fw-inline-block fw-fz-14">Все участницы</span>
                 </div>
             </a>
-            <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-mb-10">Волкова ирина, 23 года
+            <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase">Волкова ирина, 23 года
             </div>
-            <div class="fw-mb-15 fw-font-futura-demic fw-text-center fw-fz-19">
+            <div class="fw-mb-10 fw-font-futura-demic fw-text-center fw-fz-19">
                 г.Нижний Новгород
             </div>
             <div class="profile-content fw-border-radius-10 fw-bg-color-white">
@@ -63,106 +63,11 @@
                 {% endfor %}
             </div>
 
-            <div class="questionnaire">
-                <div class="block-title fw-fz-22 fw-mb-20 fw-font-futura-demic">Блиц-опрос</div>
-                <div class="questionnaire__wrapper" data-questionnaire>
-                    <div class="questionnaire__list fw-lh-1-33" data-questionnaire-height>
-                        <div class="questionnaire__item">
-                            <div class="questionnaire__title fw-font-bold">Что ты больше всего в себе любишь?</div>
-                            <div class="questionnaire__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptates!
-                            </div>
-                        </div>
-                        <div class="questionnaire__item">
-                            <div class="questionnaire__title fw-font-bold">Какая часть тела у тебя самая красивая?</div>
-                            <div class="questionnaire__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dolore doloribus
-                                excepturi exercitationem id ipsum libero molestias quaerat quis! Aliquid autem similique
-                                vero. Corporis, doloremque, dolores eaque ex excepturi fuga fugiat impedit ipsum modi,
-                                nobis non possimus quas repellendus.
-                            </div>
-                        </div>
-                        <div class="questionnaire__item">
-                            <div class="questionnaire__title fw-font-bold">Какие у тебя таланты помимо эффектной
-                                внешности?
-                            </div>
-                            <div class="questionnaire__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dolore doloribus
-                                excepturi exercitationem id ipsum libero molestias quaerat quis! Aliquid autem similique
-                                vero. Corporis, doloremque, dolores eaque ex excepturi fuga fugiat impedit ipsum modi,
-                                nobis non possimus quas repellendus.
-                            </div>
-                        </div>
-                        <div class="questionnaire__item">
-                            <div class="questionnaire__title fw-font-bold">Какие ошибки чаще всего совершают мужчины,
-                                пытаясь познакомиться с тобой?
-                            </div>
-                            <div class="questionnaire__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolorem
-                                earum impedit in magni optio perferendis quo tenetur! Ad dolores minus quo repellendus
-                                soluta. Aut iste molestias tempora velit!
-                            </div>
-                        </div>
-                        <div class="questionnaire__item">
-                            <div class="questionnaire__title fw-font-bold">Самый приятный комплимент, который тебе
-                                когда-либо делал мужчина?
-                            </div>
-                            <div class="questionnaire__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dolore doloribus
-                                excepturi exercitationem id ipsum libero molestias quaerat quis! Aliquid autem similique
-                                vero. Corporis, doloremque, dolores eaque ex excepturi fuga fugiat impedit ipsum modi,
-                                nobis non possimus quas repellendus.
-                            </div>
-                        </div>
-                        <div class="questionnaire__item">
-                            <div class="questionnaire__title fw-font-bold">Какого бы мужчину ты хотела найти?</div>
-                            <div class="questionnaire__content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolorem
-                                earum impedit in magni optio perferendis quo tenetur! Ad dolores minus quo repellendus
-                                soluta. Aut iste molestias tempora velit!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="questionnaire__button">
-                        <a href="#" class="reset-link fw-link-pink" data-questionnaire-show>Все вопросы</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'components/questionnaire.twig' %}
         </div>
     </div>
 
-    <div class="more-girls fw-pt-15">
-        <div class="container">
-            <div class="more-girls__container fw-mb-10">
-                <div class="block-title fw-fz-30 fw-font-futura-demic fw-mb-15 fw-lh-1">Ещё участницы в твоем вкусе
-                </div>
-                <div class="fw-grid fw-grid-10">
-                    {% for i in 1..4 %}
-                        <div class="fw-width-1-2">
-                            <div class="girl-box fw-width-1-1 fw-border-radius-10 fw-bg-color-light-grey">
-                                <div class="girl-box__image fw-fz-0">
-                                    <img alt="" src="http://placehold.it/140x140" class="fw-width-1-1 girl-box__avatar">
-                                </div>
-                                <div class="girl-box__content fw-pt-10 fw-pb-10 fw-pl-10 fw-pr-10">
-                                    <div class="fw-fz-13 fw-font-bold">Аня, 23, Москва</div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <a href="#"
-               class="girls-page__rating-plate reset-link fw-mb-15 fw-ml-inverse-15 fw-mr-inverse-15 fw-flex fw-flex-space-between fw-flex-middle">
-                <div>
-                    <span class="fw-inline-block fw-fz-14">Больше участниц</span>
-                </div>
-                <div>
-                    <i class="icon-arrow-right--pink icon-arrow-right icon-arrow-right--light"></i>
-                </div>
-            </a>
-        </div>
-    </div>
+    {% include 'components/more-girls.twig' %}
 
     <div class="container">
         {% include 'components/i-want.twig' %}

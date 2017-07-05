@@ -94,6 +94,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #e7edef;
 }
 
+.fw-bg-color-very-light-grey {
+  background-color: #fafafa;
+}
+
+.fw-color-very-light-grey {
+  color: #fafafa;
+}
+
 .fw-bg-cover {
   background-size: cover;
 }
@@ -5176,6 +5184,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+.button > * {
+  margin: auto;
 }
 
 .button-pink-empty {
