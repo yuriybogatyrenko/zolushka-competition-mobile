@@ -444,7 +444,6 @@ var YOURAPPNAME = function () {
                             }, 1050);
                         }, $timeout);
                         $timeout += 300;
-                        console.log($timeout);
                     });
                 }, 500);
             });
