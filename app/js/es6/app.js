@@ -411,7 +411,8 @@ class YOURAPPNAME {
 
     voteTrigger() {
         const $voteItems = $('.vote-item');
-        $('.js-vote-trigger').on('click', function () {
+        $('.js-vote-trigger').on('click', function (e) {
+            e.preventDefault();
             const $this = $(this);
 
             $this.addClass('active');
