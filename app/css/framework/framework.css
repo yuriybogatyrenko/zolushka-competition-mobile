@@ -5229,3 +5229,7 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.fw-overflow-hidden {
+  overflow: hidden;
+}

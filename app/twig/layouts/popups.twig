@@ -162,16 +162,24 @@
             <div class="fw-font-futura-demic fw-fz-19 fw-lh-1 fw-mb-20">Рекомендации по размешению фото</div>
             <div class="photo-recommendations__carousel owl-carousel fw-mb-20" data-auto-width data-margin="10">
                 <div class="photo-recommendations__example fw-width-100 photo-recommendations__example--green fw-border-radius-5">
-                    <div class="fw-fz-0"><img alt="" src="http://placehold.it/100x100"
-                                              class="fw-width-1-1 fw-border-radius-5"/></div>
+                    <div class="fw-fz-0 fw-box-proportional-100 fw-overflow-hidden">
+                        <div>
+                            <img alt="" src="images/examples1.jpg"
+                                 class="fw-width-1-1 fw-border-radius-5"/>
+                        </div>
+                    </div>
                     <div class="fw-font-medium fw-text-center fw-pl-5 fw-pr-5 fw-pt-5 fw-pb-5 fw-lh-1-33 fw-fz-13 fw-color-white">
                         Хорошо
                     </div>
                 </div>
-                {% for i in 1..10 %}
+                {% for i in 1..3 %}
                     <div class="photo-recommendations__example fw-width-100 photo-recommendations__example--red fw-border-radius-5">
-                        <div class="fw-fz-0"><img alt="" src="http://placehold.it/100x100"
-                                                  class="fw-width-1-1 fw-border-radius-5"/></div>
+                        <div class="fw-fz-0 fw-box-proportional-100 fw-overflow-hidden">
+                            <div>
+                                <img alt="" src="images/examples{{ i+1 }}.jpg"
+                                     class="fw-width-1-1 fw-border-radius-5"/>
+                            </div>
+                        </div>
                         <div class="fw-font-medium fw-text-center fw-pl-5 fw-pr-5 fw-pt-5 fw-pb-5 fw-lh-1-33 fw-fz-13 fw-color-white">
                             Плохо
                         </div>

@@ -5286,6 +5286,10 @@ textarea {
   text-overflow: ellipsis;
 }
 
+.fw-overflow-hidden {
+  overflow: hidden;
+}
+
 .circle-preloader,
 [data-circle-preloader] {
   -webkit-animation: semi-rotate 1s linear infinite;
