@@ -6540,6 +6540,44 @@ html.popup-opened body {
   padding-left: 15px;
 }
 
+.selectbox {
+  position: relative;
+}
+.selectbox select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: block;
+}
+
+.selectbox__current {
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #b9d4d4;
+  padding: 0 15px;
+  line-height: 38px;
+  height: 40px;
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.selectbox__current:after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -3px;
+  border: 5px solid transparent;
+  border-top: 7px solid #b9d4d4;
+}
+
 .popup-wrapper {
   position: fixed;
   top: 0;

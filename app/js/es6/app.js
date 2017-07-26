@@ -294,11 +294,11 @@ class YOURAPPNAME {
     }
 
     fullScreen(selector) {
-        $(selector).css({height: $(window).outerHeight()-50});
+        $(selector).css({height: $(window).outerHeight() - 50});
 
         /*$(window).resize(() => {
-            $(selector).css({height: $(window).outerHeight()-50});
-        });*/
+         $(selector).css({height: $(window).outerHeight()-50});
+         });*/
     }
 
     photosUpload() {
@@ -335,10 +335,10 @@ class YOURAPPNAME {
                                 </div>
                             </div>`;
                 /*return '<div class="fw-width-1-6 preview__item">' +
-                    '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' +
-                    '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' +
-                    '<a href="#' + index + '" class="fw-absolute fw-absolute-top-right fw-mt-inverse-10 fw-mr-inverse-10 preview__remove"><i class="icon icon-trash"></i></a>' +
-                    '</div></div></div>';*/
+                 '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' +
+                 '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' +
+                 '<a href="#' + index + '" class="fw-absolute fw-absolute-top-right fw-mt-inverse-10 fw-mr-inverse-10 preview__remove"><i class="icon icon-trash"></i></a>' +
+                 '</div></div></div>';*/
             };
 
             const renderFiles = () => {
@@ -438,6 +438,40 @@ class YOURAPPNAME {
             }, 500);
         });
     }
+
+    selectBox(selector) {
+        const selects = $(selector);
+
+        const $selectBox = {
+            init() {
+                $selectBox.render();
+                $selectBox.bindings();
+            },
+            render() {
+                selects.each(function () {
+                    const $this = $(this);
+                    $this.wrap(`<div class="selectbox"></div>`);
+                    $this.after(`<div class="selectbox__current"></div>`);
+
+                    $selectBox.updateCurrent($this);
+                });
+            },
+            bindings() {
+                selects.on('change', function() {
+                    $selectBox.updateCurrent($(this));
+                });
+            },
+            updateCurrent($box) {
+                const $this = $box;
+                const currentText = $this.find('option:selected').text();
+                $this.siblings('.selectbox__current').text(currentText);
+            }
+        };
+
+        $selectBox.init();
+
+        return $selectBox;
+    }
 }
 
 (function () {
@@ -465,6 +499,7 @@ class YOURAPPNAME {
         app.photosUpload();
         app.fullScreen('.main-first-screen');
         app.voteTrigger();
+        app.selectBox('[data-selectbox]');
     });
 
 })();

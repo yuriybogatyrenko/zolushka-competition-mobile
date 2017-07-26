@@ -309,8 +309,8 @@ var YOURAPPNAME = function () {
             $(selector).css({ height: $(window).outerHeight() - 50 });
 
             /*$(window).resize(() => {
-                $(selector).css({height: $(window).outerHeight()-50});
-            });*/
+             $(selector).css({height: $(window).outerHeight()-50});
+             });*/
         }
     }, {
         key: 'photosUpload',
@@ -342,10 +342,10 @@ var YOURAPPNAME = function () {
                 var renderTemplate = function renderTemplate(src, index) {
                     return '<div class="fw-width-1-3 preview__item">\n                                <div class="uploaded-image-box upload-photo-box fw-box-proportional-100">\n                                    <img alt="" src="' + src + '"\n                                         class="fw-border-radius-5 fw-width-1-1"/>\n                                    <a href="#' + index + '" class="preview__remove"><i class="uploaded-image-delete"></i></a>\n                                </div>\n                            </div>';
                     /*return '<div class="fw-width-1-6 preview__item">' +
-                        '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' +
-                        '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' +
-                        '<a href="#' + index + '" class="fw-absolute fw-absolute-top-right fw-mt-inverse-10 fw-mr-inverse-10 preview__remove"><i class="icon icon-trash"></i></a>' +
-                        '</div></div></div>';*/
+                     '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' +
+                     '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' +
+                     '<a href="#' + index + '" class="fw-absolute fw-absolute-top-right fw-mt-inverse-10 fw-mr-inverse-10 preview__remove"><i class="icon icon-trash"></i></a>' +
+                     '</div></div></div>';*/
                 };
 
                 var renderFiles = function renderFiles() {
@@ -449,6 +449,41 @@ var YOURAPPNAME = function () {
                 }, 500);
             });
         }
+    }, {
+        key: 'selectBox',
+        value: function selectBox(selector) {
+            var selects = $(selector);
+
+            var $selectBox = {
+                init: function init() {
+                    $selectBox.render();
+                    $selectBox.bindings();
+                },
+                render: function render() {
+                    selects.each(function () {
+                        var $this = $(this);
+                        $this.wrap('<div class="selectbox"></div>');
+                        $this.after('<div class="selectbox__current"></div>');
+
+                        $selectBox.updateCurrent($this);
+                    });
+                },
+                bindings: function bindings() {
+                    selects.on('change', function () {
+                        $selectBox.updateCurrent($(this));
+                    });
+                },
+                updateCurrent: function updateCurrent($box) {
+                    var $this = $box;
+                    var currentText = $this.find('option:selected').text();
+                    $this.siblings('.selectbox__current').text(currentText);
+                }
+            };
+
+            $selectBox.init();
+
+            return $selectBox;
+        }
     }]);
 
     return YOURAPPNAME;
@@ -479,5 +514,6 @@ var YOURAPPNAME = function () {
         app.photosUpload();
         app.fullScreen('.main-first-screen');
         app.voteTrigger();
+        app.selectBox('[data-selectbox]');
     });
 })();
