@@ -423,7 +423,8 @@ var YOURAPPNAME = function () {
         key: 'voteTrigger',
         value: function voteTrigger() {
             var $voteItems = $('.vote-item');
-            $('.js-vote-trigger').on('click', function () {
+            $('.js-vote-trigger').on('click', function (e) {
+                e.preventDefault();
                 var $this = $(this);
 
                 $this.addClass('active');

@@ -5248,9 +5248,13 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="email"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="text"].error-field, input[type="password"]:focus, input[type="password"].error-field, input[type="number"]:focus, input[type="number"].error-field, input[type="email"]:focus, input[type="email"].error-field, textarea:focus, textarea.error-field {
   border-color: #f90369;
   outline: none;
+}
+input[type="text"].error-field, input[type="password"].error-field, input[type="number"].error-field, input[type="email"].error-field, textarea.error-field {
+  -webkit-box-shadow: 0 0 5px #f90369;
+  box-shadow: 0 0 5px #f90369;
 }
 
 textarea {
@@ -5274,6 +5278,12 @@ textarea {
 
 .fw-lh-1 {
   line-height: 1;
+}
+
+.fw-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .circle-preloader,

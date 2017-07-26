@@ -109,9 +109,12 @@ input[type="text"], input[type="password"], input[type="number"], input[type="em
   color: #000
   transition: all 0.3s ease
 
-  &:focus
+  &:focus, &.error-field
     border-color: $colorPink
     outline: none
+
+  &.error-field
+    box-shadow: 0 0 5px $colorPink
 
 textarea
   height: 60px
@@ -130,3 +133,8 @@ textarea
 
 .fw-lh-1
   line-height: 1
+
+.fw-text-ellipsis
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
