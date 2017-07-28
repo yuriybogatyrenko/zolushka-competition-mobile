@@ -450,7 +450,7 @@ class YOURAPPNAME {
             render() {
                 selects.each(function () {
                     const $this = $(this);
-                    $this.wrap(`<div class="selectbox"></div>`);
+                    $this.wrap(`<div class="selectbox ${$this.attr('data-classes')}"></div>`);
                     $this.after(`<div class="selectbox__current"></div>`);
 
                     $selectBox.updateCurrent($this);
