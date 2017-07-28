@@ -1,399 +1,408 @@
 html, body
-  margin: 0
-  //height: 100%
-  font-family: Helvetica, sans-serif, arial
-  line-height: normal
-  font-size: 15px
+	margin: 0
+	//height: 100%
+	font-family: Helvetica, sans-serif, arial
+	line-height: normal
+	font-size: 15px
 
 html
-  &.popup-opened
-    overflow: hidden
-    //height: 100%
+	&.popup-opened
+		overflow: hidden
+		//height: 100%
 
-    body
-      overflow: hidden
-      height: 100%
+		body
+			overflow: hidden
+			height: 100%
 
 .app-wrapper
-  min-width: 320px
-  width: 100%
-  display: flex
-  flex-direction: column
+	min-width: 320px
+	width: 100%
+	display: flex
+	flex-direction: column
 
 .container
-  margin-left: auto
-  margin-right: auto
-  max-width: 767px
-  padding-left: 15px
-  padding-right: 15px
+	margin-left: auto
+	margin-right: auto
+	max-width: 767px
+	padding-left: 15px
+	padding-right: 15px
 
 .main-first-screen
 
-  background: url(../images/first-screen-bg.png) center top / cover
-  color: #fff
+	background: url(../images/first-screen-bg.png) center top / cover
+	color: #fff
 
 .logo__image
-  width: 45px
+	width: 45px
 
 .header
-  padding: 12px 0
-  background-color: #443a91
-  color: #fff
-  
-  &--transparent
-    background-color: transparent
+	padding: 12px 0
+	background-color: #443a91
+	color: #fff
+
+	&--transparent
+		background-color: transparent
 
 .denim-plate
-  height: 50px
-  display: flex
-  align-items: center
-  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1)
+	height: 50px
+	display: flex
+	align-items: center
+	box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1)
 
 .form-line--has-icon
-  position: relative
+	position: relative
 
-  .input--icon
-    position: absolute
-    height: 40px
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: column
-    bottom: 0
-    right: 0
-    width: 40px
+	.input--icon
+		position: absolute
+		height: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		bottom: 0
+		right: 0
+		width: 40px
 
 .girl-box__avatar
-  border-radius: 12px
+	border-radius: 12px
 
 .girls-grid
-  position: relative
-  height: 200px
-  overflow: hidden
-  padding-top: 15px
+	position: relative
+	height: 200px
+	overflow: hidden
+	padding-top: 15px
 
-  &--small
-    height: 80px
-    padding-top: 0
+	&--small
+		height: 80px
+		padding-top: 0
 
 .girls-grid__container
-  position: absolute
-  left: 50%
-  transform: translateX(-50%)
-  flex-wrap: nowrap
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	flex-wrap: nowrap
 
-  .girl-box
-    width: 130px
+	.girl-box
+		width: 130px
 
-    &--small
-      width: 90px
-      font-size: 0
+		&--small
+			width: 90px
+			font-size: 0
 
-  & > .fw-grid
-    flex-wrap: nowrap
+	& > .fw-grid
+		flex-wrap: nowrap
 
 .princess-box
-  width: 150px
-  height: 200px
-  background: url(../images/princess-box-bg.png) no-repeat center center / cover
-  position: relative
-  margin-top: -15px
+	width: 150px
+	height: 200px
+	background: url(../images/princess-box-bg.png) no-repeat center center / cover
+	position: relative
+	margin-top: -15px
 
-  [class*="icon-"]
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-
-
+	[class*="icon-"]
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
 
 .first-screen__title
-  position: relative
-  display: inline
-  .icon-18-age
-    position: absolute
-    top: -20px
-    right: 50%
-    margin-right: -120px
+	position: relative
+	display: inline
+	.icon-18-age
+		position: absolute
+		top: -20px
+		right: 50%
+		margin-right: -120px
 
 .prises__item-image
-  width: 150px
-  display: inline-block
+	width: 150px
+	display: inline-block
 
-  img
-    border-radius: 100%
-    
+	img
+		border-radius: 100%
+
 .prises
-  background: url("../images/prises-bg.jpg") center center
+	background: url("../images/prises-bg.jpg") center center
 
 .how-works
-  background-color: $colorLightBlue
+	background-color: $colorLightBlue
 
 .how-works__image
-  width: 250px
-  display: inline-block
-  
+	width: 250px
+	display: inline-block
+
 .rating
-  background-color: #f4f6f9
+	background-color: #f4f6f9
 
 .rating__table
-  td
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-    padding: 12px 5px
+	td
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+		padding: 12px 5px
 
 .rating__image, .rating__number
-  width: 1px
+	width: 1px
 
 .social__header
-  display: flex
-  align-items: center
-  padding: 0 15px
-  height: 50px
-  color: #fff
+	display: flex
+	align-items: center
+	padding: 0 15px
+	height: 50px
+	color: #fff
 
-  &--insta
-    background-color: $colorBlack
-    
-  &--vk
-    background-color: #5b7aa8
-    
-  &--fb
-    background-color: #3b579d
-    
+	&--insta
+		background-color: $colorBlack
+
+	&--vk
+		background-color: #5b7aa8
+
+	&--fb
+		background-color: #3b579d
+
 .girls-page
-  background-color: #e7edef
+	background-color: #e7edef
 
 .girls-page__rating-plate
-  border-bottom: 1px solid rgba(#000, 0.1)
-  padding: 12px 15px
+	border-bottom: 1px solid rgba(#000, 0.1)
+	padding: 12px 15px
 
 .numered-list
-  counter-reset: list
+	counter-reset: list
 
 .numered-list__item
-  padding-left: 45px
-  position: relative
-  counter-increment: list
+	padding-left: 45px
+	position: relative
+	counter-increment: list
 
-  &:after
-    display: block
-    content: counter(list)
-    position: absolute
-    left: 0
-    top: 0
-    width: 32px
-    height: 32px
-    font-size: 24px
-    color: #f90369
-    font-family: FuturaDemiC, sans-serif
-    text-align: center
-    line-height: 32px
-    border-radius: 100%
-    background-color: #fff
+	&:after
+		display: block
+		content: counter(list)
+		position: absolute
+		left: 0
+		top: 0
+		width: 32px
+		height: 32px
+		font-size: 24px
+		color: #f90369
+		font-family: FuturaDemiC, sans-serif
+		text-align: center
+		line-height: 32px
+		border-radius: 100%
+		background-color: #fff
 
 .faq__list
-  counter-reset: list
+	counter-reset: list
 
 .faq__item
-  counter-increment: list
+	counter-increment: list
 
-  &:not(:last-child)
-    margin-bottom: 15px
+	&:not(:last-child)
+		margin-bottom: 15px
 
 .faq__title
-  &:before
-    content: counter(list)'. '
-    display: inline
-    font-family: FuturaDemiC, sans-serif
+	&:before
+		content: counter(list) '. '
+		display: inline
+		font-family: FuturaDemiC, sans-serif
 
 .faq__content
-  p:not(:last-child)
-    margin-bottom: 10px
+	p:not(:last-child)
+		margin-bottom: 10px
 
 .empty-upload-area
-  height: 68px
-  border: solid 1px rgba(0, 0, 0, 0.15)
-  border-radius: 5px
-  position: relative
+	height: 68px
+	border: solid 1px rgba(0, 0, 0, 0.15)
+	border-radius: 5px
+	position: relative
 
 .questionnaire__item
-  &:not(:last-child)
-    margin-bottom: 20px
+	&:not(:last-child)
+		margin-bottom: 20px
 
 .questionnaire__title
-  margin-bottom: 3px
+	margin-bottom: 3px
 
 .questionnaire__wrapper
-  position: relative
-  height: 400px
-  overflow: hidden
-  transition: all 0.3s ease
+	position: relative
+	height: 400px
+	overflow: hidden
+	transition: all 0.3s ease
 
-  &.visible-active
-    .questionnaire__button
-      opacity: 0
-      visibility: hidden
+	&.visible-active
+		.questionnaire__button
+			opacity: 0
+			visibility: hidden
 
 .questionnaire__button
-  transition: all 0.3s ease
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  padding: 80px 0 0
-  background: linear-gradient(to bottom, rgba(231, 237, 239, 0), #e7edef 80%)
+	transition: all 0.3s ease
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 80px 0 0
+	background: linear-gradient(to bottom, rgba(231, 237, 239, 0), #e7edef 80%)
 
 .vote-page
-  background: linear-gradient(to bottom, #443a91, #302772)
+	background: linear-gradient(to bottom, #443a91, #302772)
 
 .vote-plate
-  perspective: 500px
+	perspective: 500px
 
 .vote-item
-  position: relative
-  transform-style: preserve-3d
+	position: relative
+	transform-style: preserve-3d
 
-  &.transition
-    transition: all 1s cubic-bezier(0.19, 0.4, 0.26, 1.13)
+	&.transition
+		transition: all 1s cubic-bezier(0.19, 0.4, 0.26, 1.13)
 
-  &.animate-flip
-    transform: rotateX(360deg)
+	&.animate-flip
+		transform: rotateX(360deg)
 
 .vote-item__caption
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  padding: 12px
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 12px
 
 .vote-item__like-icon
-  position: absolute
-  top: -10px
-  right: -10px
-  height: 48px
-  width: 48px
-  justify-content: center
-  align-items: center
-  display: flex
+	position: absolute
+	top: -10px
+	right: -10px
+	height: 48px
+	width: 48px
+	justify-content: center
+	align-items: center
+	display: flex
 
-  & > *
-    margin: auto
-    display: none
+	& > *
+		margin: auto
+		display: none
 
-    &:first-child
-      display: block
+		&:first-child
+			display: block
 
-  &.active
-    & > *
-      display: none
-      &:last-child
-        display: block
+	&.active
+		& > *
+			display: none
+			&:last-child
+				display: block
 
-  &-pink
-    background-color: $colorPink
+	&-pink
+		background-color: $colorPink
 
-  &-green
-    background-color: #35D2AC
+	&-green
+		background-color: #35D2AC
 
 .photo-recommendations__example--green
-  background-color: #12d579
+	background-color: #12d579
 
 .photo-recommendations__example--red
-  background-color: #ea152f
+	background-color: #ea152f
 
 .uploaded-image-box
-  position: relative
-  font-size: 0
-  width: 100%
+	position: relative
+	font-size: 0
+	width: 100%
 
-  img
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    object-fit: cover
+	img
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
 
 .uploaded-image-delete
-  position: absolute
-  top: 5px
-  right: 5px
-  width: 22px
-  height: 22px
-  border-radius: 100%
-  background-color: rgba(#000, 0.6)
-  transform: rotate(-45deg)
+	position: absolute
+	top: 5px
+	right: 5px
+	width: 22px
+	height: 22px
+	border-radius: 100%
+	background-color: rgba(#000, 0.6)
+	transform: rotate(-45deg)
 
-  &:after, &:before
-    position: absolute
-    top: 50%
-    left: 50%
-    width: 60%
-    height: 2px
-    background-color: #fff
-    transform: translate(-50%, -50%)
-    content: ''
-    display: block
+	&:after, &:before
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 60%
+		height: 2px
+		background-color: #fff
+		transform: translate(-50%, -50%)
+		content: ''
+		display: block
 
-  &:after
-    width: 2px
-    height: 60%
+	&:after
+		width: 2px
+		height: 60%
 
 .photo-upload-area
-  .empty-upload-area
-    display: flex
+	.empty-upload-area
+		display: flex
 
-  .filled-upload-area
-    display: none
+	.filled-upload-area
+		display: none
 
-  &.image-drop-box-has-file
-    .filled-upload-area
-      display: flex
+	&.image-drop-box-has-file
+		.filled-upload-area
+			display: flex
 
-    .empty-upload-area
-      display: none
+		.empty-upload-area
+			display: none
 
 .animated-preloader
-  position: relative
-  height: 50px
+	position: relative
+	height: 50px
 
 .girls-carousel
-  .owl-stage-outer
-    margin-left: -15px
-    padding-left: 15px
+	.owl-stage-outer
+		margin-left: -15px
+		padding-left: 15px
 
 .selectbox
-  position: relative
+	position: relative
 
-  select
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    opacity: 0
-    display: block
+	select
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		display: block
 
 .selectbox__current
-  border-radius: 5px
-  background-color: #ffffff
-  border: solid 1px #b9d4d4
-  padding: 0 15px
-  line-height: 38px
-  height: 40px
-  display: block
-  width: 100%
-  font-size: 15px
-  color: #000
-  -webkit-transition: all 0.3s ease
-  transition: all 0.3s ease
+	border-radius: 5px
+	background-color: #ffffff
+	border: solid 1px #b9d4d4
+	padding: 0 15px
+	line-height: 38px
+	height: 40px
+	display: block
+	width: 100%
+	font-size: 15px
+	color: #000
+	-webkit-transition: all 0.3s ease
+	transition: all 0.3s ease
 
-  &:after
-    display: block
-    content: ''
-    position: absolute
-    right: 15px
-    top: 50%
-    margin-top: -3px
-    border: 5px solid transparent
-    border-top: 7px solid #b9d4d4
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		right: 15px
+		top: 50%
+		margin-top: -3px
+		border: 5px solid transparent
+		border-top: 7px solid #b9d4d4
+
+.profile-avatar
+	position: relative
+
+.profile-avatar-error
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.6)

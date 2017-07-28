@@ -12,132 +12,147 @@
 @import "text"
 
 *
-  box-sizing: border-box
+	box-sizing: border-box
 
 .fw-inline-block
-  display: inline-block
-  vertical-align: middle
+	display: inline-block
+	vertical-align: middle
 
 .fw-block
-  display: block
+	display: block
 
 .fw-inline
-  display: inline
+	display: inline
 
 @each $value in 100
-  .fw-box-proportional-#{$value}
-    position: relative
+	.fw-box-proportional-#{$value}
+		position: relative
 
-    &::after
-      display: block
-      content: ''
-      padding-top: unquote("#{$value}%")
+		&::after
+			display: block
+			content: ''
+			padding-top: unquote("#{$value}%")
 
-    > *
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
+		> *
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
 
 .reset-link
-  color: inherit
-  text-decoration: inherit
+	color: inherit
+	text-decoration: inherit
 
 .button
-  font-family: FuturaDemiC, arial, sans-serif
-  text-decoration: none
-  line-height: 1.1
-  font-size: 19px
-  padding: 10px 40px
-  border: none
-  text-align: center
-  display: inline-flex
-  align-items: center
-  justify-content: center
+	font-family: FuturaDemiC, arial, sans-serif
+	text-decoration: none
+	line-height: 1.1
+	font-size: 19px
+	padding: 10px 40px
+	border: none
+	text-align: center
+	display: inline-flex
+	align-items: center
+	justify-content: center
 
-  > *
-    margin: auto
+	> *
+		margin: auto
 
 .button-pink-empty
-  box-shadow: 0 0 0 1px $colorPink inset
-  background-color: transparent
-  font-size: 16px
-  font-family: Helvetica, sans-serif
-  color: $colorPink
-  text-decoration: none
+	box-shadow: 0 0 0 1px $colorPink inset
+	background-color: transparent
+	font-size: 16px
+	font-family: Helvetica, sans-serif
+	color: $colorPink
+	text-decoration: none
 
 .button-pink
-  background: #f90369
-  color: #fff
-  
+	background: #f90369
+	color: #fff
+
 .button-yellow
-  background-color: #ffd758
-  color: $colorBlack
+	background-color: #ffd758
+	color: $colorBlack
 
 .button-blue
-  background-color: $colorLightBlue
-  color: $colorBlack
+	background-color: $colorLightBlue
+	color: $colorBlack
 
 .button-grey
-  background-color: rgba(255, 255, 255, 0.4)
-  color: #f90369
-  font-family: Helvetica, sans-serif
-  font-size: 15px
-  height: 44px
+	background-color: rgba(255, 255, 255, 0.4)
+	color: #f90369
+	font-family: Helvetica, sans-serif
+	font-size: 15px
+	height: 44px
 
 .button-dark-blue
-  color: #fff
-  background-color: #24dff1
+	color: #fff
+	background-color: #24dff1
 
 .button-round
-  border-radius: 50px
+	border-radius: 50px
 
 .button-square
-  border-radius: 5px
+	border-radius: 5px
 
 input[type="text"], input[type="password"], input[type="number"], input[type="email"], textarea
-  border-radius: 5px
-  background-color: #ffffff
-  //box-shadow: inset 1px 1px 0 0 #bad5d5
-  border: solid 1px #b9d4d4
-  padding: 0 15px
-  height: 40px
-  display: block
-  width: 100%
-  font-size: 15px
-  color: #000
-  transition: all 0.3s ease
+	border-radius: 5px
+	background-color: #ffffff
+	//box-shadow: inset 1px 1px 0 0 #bad5d5
+	border: solid 1px #b9d4d4
+	padding: 0 15px
+	height: 40px
+	display: block
+	width: 100%
+	font-size: 15px
+	color: #000
+	transition: all 0.3s ease
 
-  &:focus, &.error-field
-    border-color: $colorPink
-    outline: none
+	&:focus, &.error-field
+		border-color: $colorPink
+		outline: none
 
-  &.error-field
-    box-shadow: 0 0 5px $colorPink
+	&.error-field
+		box-shadow: 0 0 5px $colorPink
 
 textarea
-  height: 60px
-  padding-top: 10px
-  padding-bottom: 10px
-  resize: none
+	height: 60px
+	padding-top: 10px
+	padding-bottom: 10px
+	resize: none
 
 .fw-link-pink
-  color: #f90369
+	color: #f90369
 
 .fw-lh-1-54
-  line-height: 1.54
+	line-height: 1.54
 
 .fw-lh-1-33
-  line-height: 1.33
+	line-height: 1.33
+
+.fw-lh-1-32
+	line-height: 1.32
 
 .fw-lh-1
-  line-height: 1
+	line-height: 1
 
 .fw-text-ellipsis
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
 
 .fw-overflow-hidden
-  overflow: hidden
+	overflow: hidden
+
+.fw-position-relative
+	position: relative
+
+.fw-position-absolute
+	position: absolute
+
+.fw-top-0
+	top: 0
+
+.fw-left-0
+	left: 0

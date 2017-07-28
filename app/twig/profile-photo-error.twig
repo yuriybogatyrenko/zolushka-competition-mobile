@@ -1,0 +1,118 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="profile-page fw-bg-color-light-grey fw-pb-30">
+        <div class="container">
+            <a href="girls-rating.html"
+               class="girls-page__rating-plate reset-link fw-mb-15 fw-ml-inverse-15 fw-mr-inverse-15 fw-flex fw-flex-space-between fw-flex-middle">
+                <div>
+                    <i class="icon-rating-grid fw-mr-5"></i>
+                    <span class="fw-inline-block fw-fz-14">Все участницы</span>
+                </div>
+            </a>
+            <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-text-center">Волкова ирина, 23 года
+            </div>
+            <div class="fw-mb-10 fw-font-futura-demic fw-text-center fw-fz-19">
+                г.Нижний Новгород
+            </div>
+            <div class="profile-content fw-border-radius-10 fw-bg-color-white">
+                <div class="profile-avatar fw-fz-0">
+                    <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                    <div class="profile-avatar-error fw-flex fw-flex-middle fw-flex-column fw-pt-15 fw-pl-10 fw-pr-10 fw-pb-10">
+                        <i class="icon-error fw-mb-10 fw-flex-shrink-0"></i>
+                        <p class="fw-fz-19 fw-lh-1-32 fw-text-center fw-mb-7 fw-color-white">Внимание. Ваше фото не соответствует <span class="fw-color-pink">рекомендациям</span> по размещению.</p>
+                        <p class="fw-fz-15 fw-lh-1-33 fw-text-center fw-mb-25 fw-color-white">Чтобы продолжить участие в конкурсе необходимо заменить фотографию.</p>
+                        <div class="fw-text-center fw-mb-30">
+                            <span class="button button-pink fw-border-radius-5">Загрузить другое фото</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-details fw-pl-15 fw-pr-15 fw-pb-15 fw-pt-15 fw-lh-1-33">
+                    <div class="fw-flex fw-flex-middle fw-mb-20">
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-battles-big fw-mr-5"></i>
+                            <span>2342</span>
+                        </div>
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-likes-big fw-mr-5"></i>
+                            <span>11</span>
+                        </div>
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-rating-list-big fw-mr-5"></i>
+                            <span>234</span>
+                        </div>
+                    </div>
+                    <div class="fw-font-bold">
+                        Как увеличить шансы на победу
+                    </div>
+                    <div class="fw-mb-15">
+                        Подпишись на канал конкурса на <a href="#" class="reset-link fw-link-pink">YouTube</a>
+                    </div>
+                    <div class="fw-mb-10">
+                        <div class="fw-mb-10">Подпишись на Denim в социальных сетях <br>
+                            +10 мест в рейтинге:
+                        </div>
+                        <div class="fw-grid fw-grid-15">
+                            <div>
+                                <i class="icon-social-small-tw"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-vk"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-fb"></i>
+                            </div>
+                            <div>
+                                <i class="icon-social-small-insta"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fw-mb-20">
+                        Сделай репост любой из записей <br>
+                        +15 мест в рейтинге <a href="#" class="reset-link fw-link-pink js-open-popup" data-popup-target="subscription">Выбрать запись</a>
+                    </div>
+                    <div class="fw-mb-20">
+                        Поделись с друзьями новостью об участии в конкурсе
+                        +20 мест в рейтиге
+                    </div>
+                    <div>
+                        <a href="#" class="button button-square button-pink-empty fw-width-1-1 js-open-popup" data-popup-target="share-with-friends">
+                            <span>
+                                <i class="icon-external-link fw-mr-5"></i>
+                                <span class="fw-inline-block">Поделиться</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="girls-carousel fw-mr-inverse-15 fw-width-auto owl-carousel fw-pt-15 fw-pb-15" data-auto-width data-margin="15" data-loop>
+                {% for i in 1..10 %}
+                    <div class="fw-position-relative">
+                        <img alt="" src="http://placehold.it/110x110" class="fw-border-radius-10" />
+                        <div class="profile-avatar-error fw-flex fw-flex-center fw-flex-middle">
+                            <i class="icon-error fw-flex-shrink-0"></i>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% include 'components/questionnaire.twig' %}
+        </div>
+    </div>
+
+    {% include 'components/more-girls.twig' %}
+
+    <div class="container">
+        {% include 'components/i-want.twig' %}
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+
+    {% include 'components/denim-plate.twig' %}
+{% endblock %}
