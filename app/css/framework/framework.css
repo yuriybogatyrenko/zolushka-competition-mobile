@@ -6542,6 +6542,10 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
+.button.button-download-other-photo {
+  padding: 10px;
+  width: 100%;
+}
 .button > * {
   margin: auto;
 }
