@@ -8055,6 +8055,43 @@ html.popup-opened body {
   background: rgba(0, 0, 0, 0.7);
 }
 
+.custom-select .selectbox__current {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  height: auto;
+  color: #f90369;
+}
+.custom-select .selectbox__current::after {
+  content: none;
+}
+.custom-select .selectbox__current::before {
+  position: relative;
+  padding-right: 5px;
+  content: "";
+  top: 0;
+  left: 0;
+  background-image: url('../images/icons-sff6e3ea763.png');
+  background-position: 0 -509px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .custom-select .selectbox__current::before {
+    background-image: url('../images/icons-2x-s964301a477.png');
+    background-size: 174px auto;
+    background-position: 0 -467px;
+    height: 16px;
+    width: 16px;
+  }
+}
+
 .popup-wrapper {
   position: fixed;
   top: 0;
