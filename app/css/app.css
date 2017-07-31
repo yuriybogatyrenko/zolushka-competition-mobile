@@ -8112,6 +8112,16 @@ html.popup-opened body {
   }
 }
 
+.profile-avatar__add-photo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .popup-wrapper {
   position: fixed;
   top: 0;

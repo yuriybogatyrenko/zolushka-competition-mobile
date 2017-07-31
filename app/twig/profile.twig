@@ -20,9 +20,44 @@
             <div class="fw-mb-10 fw-font-futura-demic fw-text-center fw-fz-19">
                 г.Нижний Новгород
             </div>
-            <div class="profile-content fw-border-radius-10 fw-bg-color-white">
+            <div class="profile-content fw-border-radius-10 fw-bg-color-white fw-mb-15">
                 <div class="profile-avatar fw-fz-0">
-                    <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                    <label class="profile-avatar__add-photo">
+                        <i class="icon-camera"></i>
+                        <input type="file" class="fw-hidden">
+                    </label>
+                    <div class="owl-carousel" data-loop data-items="1">
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                    </div>
                 </div>
                 <div class="profile-details fw-pl-15 fw-pr-15 fw-pb-15 fw-pt-15 fw-lh-1-33">
                     <div class="fw-flex fw-flex-middle fw-mb-20">
@@ -81,14 +116,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-
-            <div class="girls-carousel fw-mr-inverse-15 fw-width-auto owl-carousel fw-pt-15 fw-pb-15" data-auto-width data-margin="15" data-loop>
-                {% for i in 1..10 %}
-                    <div>
-                        <img alt="" src="http://placehold.it/110x110" class="fw-border-radius-10" />
-                    </div>
-                {% endfor %}
             </div>
 
             {% include 'components/questionnaire.twig' %}
