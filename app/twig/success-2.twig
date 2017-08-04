@@ -1,0 +1,32 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="fw-bg-color-light-grey fw-pt-30 fw-pb-30">
+        <div class="container">
+            <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-mb-15">Все что нужно знать о конкурсе</div>
+            <div class="up-your-chance fw-mb-30">
+                <div class="fw-fz-19 fw-font-futura-demic fw-mb-20">
+                    Ваша заявка на участие в конкурсе успешно принята.
+                </div>
+                <div class="fw-fz-14">
+                    Голосование по конкурсу начнется 01.09.2017
+                </div>
+                <div class="fw-font-futura-demic fw-fz-19 fw-mb-15 fw-mt-15">Как отслеживать результаты конкурса?</div>
+                <div class="fw-mb-10 fw-fz-14 fw-lh-1-54">
+                    Ты можешь отслеживать состояние конкурса в личном кабинете, для этого необходимо
+                    зайти <a href="#" class="fw-link-pink fw-text-underline-hover">на свою страницу</a> нажав на аватарку в верхнем правом углу.
+                </div>
+                <div class="fw-fz-14 fw-lh-1-54">
+                    А также найди свою карточку в <a href="#" class="fw-link-pink fw-text-underline-hover">общем рейтинге</a> участниц на главной странице после 21 июня 2017 года.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+{% endblock %}
