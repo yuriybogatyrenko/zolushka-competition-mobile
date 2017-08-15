@@ -299,7 +299,8 @@ var YOURAPPNAME = function () {
                     nav: false,
                     dots: false,
                     margin: Vthis.hasAttribute('data-margin') ? parseInt(Vthis.getAttribute('data-margin')) : 0,
-                    loop: Vthis.hasAttribute('data-loop')
+                    loop: Vthis.hasAttribute('data-loop'),
+                    items: Vthis.hasAttribute('data-items') ? parseInt(Vthis.getAttribute('data-items')) : 3
                 });
             });
         }
@@ -515,5 +516,12 @@ var YOURAPPNAME = function () {
         app.fullScreen('.main-first-screen');
         app.voteTrigger();
         app.selectBox('[data-selectbox]');
+
+        $('.js-open-image-gallery').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
     });
 })();
