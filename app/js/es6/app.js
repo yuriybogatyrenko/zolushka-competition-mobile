@@ -329,7 +329,7 @@ class YOURAPPNAME {
 
             const renderTemplate = (src, index) => {
                 return `<div class="fw-width-1-3 preview__item">
-                                <div class="uploaded-image-box upload-photo-box fw-box-proportional-100">
+                                <div class="uploaded-image-box first__item upload-photo-box fw-box-proportional-100">
                                     <img alt="" src="${src}"
                                          class="fw-border-radius-5 fw-width-1-1"/>
                                     <a href="#${index}" class="preview__remove"><i class="uploaded-image-delete"></i></a>
@@ -352,7 +352,7 @@ class YOURAPPNAME {
                         templates.push(renderTemplate(imageListSrc, i));
 
                         $imagePreviewBox.children('.preview__item').remove();
-                        $imagePreviewBox.prepend(templates.join(''));
+                        $imagePreviewBox.append(templates.join(''));
                     }
                 }
             };
@@ -473,6 +473,12 @@ class YOURAPPNAME {
         return $selectBox;
     }
 
+    dragAndSort() {
+        $('#image-drop-box__preview').sortable({
+            cancel: '.static',
+        });
+    }
+
     sortableTouch() {
         !function (a) {
             function f(a, b) {
@@ -527,6 +533,7 @@ class YOURAPPNAME {
         // Do not use jQuery here cause external libs do not loads here...
         app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
         app.sortableTouch();
+
     });
 
     app.appLoad('full', function (e) {
@@ -538,9 +545,7 @@ class YOURAPPNAME {
         app.fullScreen('.main-first-screen');
         app.voteTrigger();
         app.selectBox('[data-selectbox]');
-
-        $('.js-sortable-upload-photos').sortable();
-
+        app.dragAndSort();
         $('.js-open-image-gallery').magnificPopup({
             type: 'image',
             gallery: {
@@ -556,4 +561,6 @@ class YOURAPPNAME {
             $('body, html').animate({scrollTop: scrollTop}, 800);
         });
     });
+
 })();
+

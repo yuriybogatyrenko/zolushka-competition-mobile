@@ -341,7 +341,7 @@ var YOURAPPNAME = function () {
                 };
 
                 var renderTemplate = function renderTemplate(src, index) {
-                    return '<div class="fw-width-1-3 preview__item">\n                                <div class="uploaded-image-box upload-photo-box fw-box-proportional-100">\n                                    <img alt="" src="' + src + '"\n                                         class="fw-border-radius-5 fw-width-1-1"/>\n                                    <a href="#' + index + '" class="preview__remove"><i class="uploaded-image-delete"></i></a>\n                                </div>\n                            </div>';
+                    return '<div class="fw-width-1-3 preview__item">\n                                <div class="uploaded-image-box first__item upload-photo-box fw-box-proportional-100">\n                                    <img alt="" src="' + src + '"\n                                         class="fw-border-radius-5 fw-width-1-1"/>\n                                    <a href="#' + index + '" class="preview__remove"><i class="uploaded-image-delete"></i></a>\n                                </div>\n                            </div>';
                     /*return '<div class="fw-width-1-6 preview__item">' +
                      '<div class="fw-width-1-1 fw-box-proportional-100 preview__thumb"><div class="fw-height-1-1 fw-width-1-1">' +
                      '<img src="' + src + '" alt="" class="fw-img-cover fw-border-radius-5">' +
@@ -359,7 +359,7 @@ var YOURAPPNAME = function () {
                             templates.push(renderTemplate(imageListSrc, i));
 
                             $imagePreviewBox.children('.preview__item').remove();
-                            $imagePreviewBox.prepend(templates.join(''));
+                            $imagePreviewBox.append(templates.join(''));
                         }
                     }
                 };
@@ -485,6 +485,13 @@ var YOURAPPNAME = function () {
             return $selectBox;
         }
     }, {
+        key: 'dragAndSort',
+        value: function dragAndSort() {
+            $('#image-drop-box__preview').sortable({
+                cancel: '.static'
+            });
+        }
+    }, {
         key: 'sortableTouch',
         value: function sortableTouch() {
             !function (a) {
@@ -558,9 +565,7 @@ var YOURAPPNAME = function () {
         app.fullScreen('.main-first-screen');
         app.voteTrigger();
         app.selectBox('[data-selectbox]');
-
-        $('.js-sortable-upload-photos').sortable();
-
+        app.dragAndSort();
         $('.js-open-image-gallery').magnificPopup({
             type: 'image',
             gallery: {
