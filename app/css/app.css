@@ -8122,6 +8122,27 @@ html.popup-opened body {
   padding: 10px;
 }
 
+.owl-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.owl-dots .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  -webkit-box-shadow: inset 0 0 0 2px #F90369;
+  box-shadow: inset 0 0 0 2px #F90369;
+  margin: 0 5px;
+}
+.owl-dots .owl-dot.active {
+  background-color: #F90369;
+}
+
 .popup-wrapper {
   position: fixed;
   top: 0;

@@ -297,7 +297,7 @@ var YOURAPPNAME = function () {
                 $this.owlCarousel({
                     autoWidth: Vthis.hasAttribute('data-auto-width'),
                     nav: false,
-                    dots: false,
+                    dots: Vthis.hasAttribute('data-dots') ? Vthis.getAttribute('data-dots') : false,
                     margin: Vthis.hasAttribute('data-margin') ? parseInt(Vthis.getAttribute('data-margin')) : 0,
                     loop: Vthis.hasAttribute('data-loop'),
                     items: Vthis.hasAttribute('data-items') ? parseInt(Vthis.getAttribute('data-items')) : 3
