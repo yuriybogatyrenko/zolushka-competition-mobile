@@ -572,7 +572,6 @@ var YOURAPPNAME = function () {
             e.preventDefault();
 
             var scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
-            console.log(scrollTop);
 
             $('body, html').animate({ scrollTop: scrollTop }, 800);
         });

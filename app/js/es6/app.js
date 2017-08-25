@@ -547,14 +547,13 @@ class YOURAPPNAME {
                 enabled: true
             }
         });
-    });
-
-    $('[data-scroll-down]').on('click', function (e) {
-        e.preventDefault();
-
-        const scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
-        console.log(scrollTop);
-
-        $('body, html').animate({scrollTop: scrollTop}, 800);
+        
+        $('[data-scroll-down]').on('click', function(e) {
+            e.preventDefault();
+            
+            const scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
+            
+            $('body, html').animate({scrollTop: scrollTop}, 800);
+        });
     });
 })();

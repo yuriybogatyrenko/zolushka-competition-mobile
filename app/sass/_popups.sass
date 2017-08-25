@@ -4,7 +4,7 @@
   left: 0
   right: 0
   bottom: 0
-  display: flex
+  display: block
   padding: 20px
   background-color: rgba(#000, 0.55)
   box-shadow: 0 0 0 1000px rgba(#000, 0.55)
@@ -13,6 +13,7 @@
   transition: all 0.3s ease
   z-index: 1000
   overflow: auto
+  -webkit-overflow-scrolling: touch
 
   &.opened
     visibility: visible
@@ -26,9 +27,13 @@
   transform: scale(0.7)
   margin: auto
   width: 100%
-  flex-direction: column
+  min-height: 0
+  min-width: 0
+  //flex-direction: column
   border-radius: 10px
   position: relative
+  flex-shrink: 0
+  align-self: center
 
   &.login-popup
     padding: 30px
