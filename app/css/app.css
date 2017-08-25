@@ -7796,15 +7796,17 @@ html.popup-opened body {
 }
 
 .numered-list__item {
-  padding-left: 45px;
   position: relative;
+  padding-top: 45px;
   counter-increment: list;
 }
 .numered-list__item:after {
   display: block;
   content: counter(list);
   position: absolute;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 0;
   width: 32px;
   height: 32px;
