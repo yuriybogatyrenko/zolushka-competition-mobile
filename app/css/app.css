@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -8122,6 +8123,20 @@ html.popup-opened body {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   padding: 10px;
+}
+
+.preview__item:first-child {
+  position: relative;
+}
+.preview__item:first-child::after {
+  position: absolute;
+  top: 65%;
+  left: 17px;
+  padding: 3px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  content: "Основное";
+  color: #fff;
 }
 
 .popup-wrapper {
