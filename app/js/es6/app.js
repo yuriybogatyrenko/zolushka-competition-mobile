@@ -286,7 +286,7 @@ class YOURAPPNAME {
             $this.owlCarousel({
                 autoWidth: Vthis.hasAttribute('data-auto-width'),
                 nav: false,
-                dots: false,
+                dots: Vthis.hasAttribute('data-dots'),
                 margin: Vthis.hasAttribute('data-margin') ? parseInt(Vthis.getAttribute('data-margin')) : 0,
                 loop: Vthis.hasAttribute('data-loop'),
                 items: Vthis.hasAttribute('data-items') ? parseInt(Vthis.getAttribute('data-items')) : 3
@@ -546,6 +546,16 @@ class YOURAPPNAME {
             gallery: {
                 enabled: true
             }
+        });
+        });
+
+        $('[data-scroll-down]').on('click', function(e) {
+            e.preventDefault();
+
+            const scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
+            console.log(scrollTop);
+
+            $('body, html').animate({scrollTop: scrollTop}, 800);
         });
     });
 
