@@ -572,14 +572,13 @@ var YOURAPPNAME = function () {
                 enabled: true
             }
         });
-    });
 
-    $('[data-scroll-down]').on('click', function (e) {
-        e.preventDefault();
+        $('[data-scroll-down]').on('click', function (e) {
+            e.preventDefault();
 
-        var scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
-        console.log(scrollTop);
+            var scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
 
-        $('body, html').animate({ scrollTop: scrollTop }, 800);
+            $('body, html').animate({ scrollTop: scrollTop }, 800);
+        });
     });
 })();

@@ -7605,12 +7605,15 @@ html, body {
   font-size: 15px;
 }
 
+html {
+  height: 100%;
+}
+
 html.popup-opened {
   overflow: hidden;
 }
 html.popup-opened body {
   overflow: hidden;
-  height: 100%;
 }
 
 .app-wrapper {
@@ -8191,9 +8194,7 @@ html.popup-opened body {
   left: 0;
   right: 0;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.55);
   -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.55);
@@ -8204,6 +8205,7 @@ html.popup-opened body {
   transition: all 0.3s ease;
   z-index: 1000;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .popup-wrapper.opened {
   visibility: visible;
@@ -8221,12 +8223,14 @@ html.popup-opened body {
   transform: scale(0.7);
   margin: auto;
   width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
   border-radius: 10px;
   position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 .popup.login-popup {
   padding: 30px;
