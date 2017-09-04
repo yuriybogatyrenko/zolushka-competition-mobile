@@ -175,6 +175,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 83.333%;
 }
 
+.fw-width-36 {
+  width: 36px;
+}
+
+.fw-max-width-36 {
+  max-width: 36px;
+}
+
 .fw-width-90 {
   width: 90px;
 }
