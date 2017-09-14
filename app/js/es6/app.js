@@ -552,13 +552,17 @@ class YOURAPPNAME {
                 enabled: true
             }
         });
-        
-        $('[data-scroll-down]').on('click', function(e) {
+
+        $('[data-scroll-down]').on('click', function (e) {
             e.preventDefault();
-            
+
             const scrollTop = parseInt($('.main-first-screen').offset().top) + parseInt($('.main-first-screen ').outerHeight());
-            
+
             $('body, html').animate({scrollTop: scrollTop}, 800);
+        });
+
+        $('form[data-focus-undisable] input[type="text"]').focus(function () {
+            $(this).closest('form').find('button[disabled]').removeAttr('disabled');
         });
     });
 

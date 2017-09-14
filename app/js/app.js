@@ -580,5 +580,9 @@ var YOURAPPNAME = function () {
 
             $('body, html').animate({ scrollTop: scrollTop }, 800);
         });
+
+        $('form[data-focus-undisable] input[type="text"]').focus(function () {
+            $(this).closest('form').find('button[disabled]').removeAttr('disabled');
+        });
     });
 })();

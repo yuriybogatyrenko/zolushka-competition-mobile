@@ -6549,6 +6549,11 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button[disabled] {
+  background-color: #ccc !important;
 }
 .button.button-download-other-photo {
   padding: 10px;
