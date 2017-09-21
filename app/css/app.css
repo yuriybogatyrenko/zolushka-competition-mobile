@@ -6609,6 +6609,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.button.button-small-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .button[disabled] {
   background-color: #ccc !important;
 }

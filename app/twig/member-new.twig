@@ -1,0 +1,94 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+    {% include 'layouts/header.twig' %}
+
+    <div class="profile-page fw-bg-color-light-grey fw-pb-30">
+        <div class="container">
+            <a href="girls-rating.html"
+               class="girls-page__rating-plate reset-link fw-mb-15 fw-ml-inverse-15 fw-mr-inverse-15 fw-flex fw-flex-space-between fw-flex-middle">
+                <div>
+                    <i class="icon-rating-grid fw-mr-5"></i>
+                    <span class="fw-inline-block fw-fz-14">Все участницы</span>
+                </div>
+            </a>
+            <div class="block-title fw-fz-22 fw-font-futura-demic fw-text-uppercase fw-text-center">Волкова ирина, 23 года
+            </div>
+            <div class="fw-mb-10 fw-font-futura-demic fw-text-center fw-fz-19">
+                г.Нижний Новгород
+            </div>
+            <div class="profile-content fw-border-radius-10 fw-bg-color-white fw-mb-15">
+                <div class="profile-avatar fw-fz-0">
+                    <label class="profile-avatar__add-photo">
+                        <i class="icon-camera"></i>
+                        <input type="file" class="fw-hidden">
+                    </label>
+                    <div class="owl-carousel" data-loop data-items="1" data-dots>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                        <a href="http://placehold.it/500x500" class="fw-block js-open-image-gallery">
+                            <img alt="" src="http://placehold.it/500x500" class="fw-width-1-1 fw-border-radius-10"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="profile-details fw-pl-15 fw-pr-15 fw-pb-15 fw-pt-15 fw-lh-1-33">
+                    <div class="fw-flex fw-flex-middle fw-mb-20">
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-battles-big fw-mr-5"></i>
+                            <span>2342</span>
+                        </div>
+                        <div class="fw-flex fw-flex-middle fw-fz-16 fw-mr-20">
+                            <i class="icon-likes-big fw-mr-5"></i>
+                            <span>11</span>
+                        </div>
+                    </div>
+                    <p class="fw-font-bold fw-mb-5">Понравилась? Напиши или позвони ей!</p>
+                    <p><a href="#" class="fw-color-pink fw-text-underline-hover">Посмотреть профиль девушки в Denim</a></p>
+                    <div class="fw-mt-20">
+                        <a href="#" class="button button-pink button-square fw-width-1-1 button-small-padding fw-text-uppercase">Голосовать и выиграть клубную карту Denim</a>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'components/questionnaire.twig' %}
+        </div>
+    </div>
+
+    {% include 'components/more-girls.twig' %}
+
+    <div class="container">
+        {% include 'components/i-want.twig' %}
+    </div>
+
+    {% include 'layouts/footer.twig' %}
+
+    {% include 'components/denim-plate.twig' %}
+{% endblock %}
